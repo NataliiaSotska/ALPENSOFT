@@ -1,7 +1,7 @@
 @import './colors/project_default';
 
 // General ---------------
-
+$hamburger-bg: rgba(color('default', 'dark-gray'), .87);
 // -----------------------
 
 // Header ---------------
@@ -17,7 +17,9 @@
 // -----------------------
 
 // Buttons ---------------
-
+$btn-text   : $white;
+$btn-primary   : color('state', 'blue');
+$btn-shadow: color('default', 'blue');
 // -----------------------
 
 // Tables ----------------

@@ -24,14 +24,8 @@ body {
 
 a {
   background-color: transparent;
-  color: $base-link;
+  color: $base-text;
   text-decoration: none;
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: darken($base-link, 10%);
-  }
 }
 
 img {
