@@ -30,9 +30,9 @@ $size-body: (
 );
 
 $size-h1: (
-  null   : (3.2rem, line_height(40, 32), 2rem), // 'font-size', 'line-height', 'margin-value'
-  medium : (4rem, line_height(45, 40), 2.2rem),
-  xlarge : (4.8rem, line_height(50.4, 48), 2.2rem)
+  null   : (1.4rem, line_height(20, 14), 2rem), // 'font-size', 'line-height', 'margin-value'
+  medium : (2.8rem, line_height(40, 28), 2.2rem),
+  xlarge : (2.8rem, line_height(40, 28), 2.2rem)
 );
 
 $size-h2: (

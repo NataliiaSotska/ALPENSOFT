@@ -36,12 +36,14 @@ $xlarge-screen-up   : (map_get($screen-breakpoints, 'xlarge') + 1);
 
 // Footer ---------------
 $footer-height: (
-    xsmall : 6rem,
-    small  : 6rem,
-    medium : 6rem,
-    large  : 6rem,
-    xlarge : 6rem
+    xsmall : 0,
+    small  : 0,
+    medium : 0,
+    large  : 0,
+    xlarge : 0
 );
+
+$header-height: 5.6rem;
 // ----------------------
 
 $vars : (
