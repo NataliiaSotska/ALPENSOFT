@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon Start 64</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Ver4.3" transform="translate(-832.000000, -1570.000000)">
+            <g id="Block-3" transform="translate(112.000000, 1482.000000)">
+                <g id="Group-21-Copy-3" transform="translate(720.000000, 88.000000)">
+                    <g id="Icon-Start-64">
+                        <rect id="Rectangle-16" x="0" y="0" width="64" height="64"></rect>
+                        <g id="Group-75" transform="translate(8.000000, 8.000000)" stroke="#0069FF">
+                            <circle id="Oval-9" stroke-width="2" cx="24" cy="24" r="23"></circle>
+                            <circle id="Oval-11" stroke-width="2" cx="24" cy="24" r="15"></circle>
+                            <circle id="Oval-10" stroke-width="2" cx="24" cy="24" r="3"></circle>
+                            <rect id="Rectangle-39" transform="translate(30.579761, 17.518031) rotate(-47.000000) translate(-30.579761, -17.518031) " x="24.6320298" y="17.0180307" width="11.8954618" height="1"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

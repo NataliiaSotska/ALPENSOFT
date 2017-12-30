@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="116px" height="116px" viewBox="0 0 116 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon Two</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Ver4.3" transform="translate(-567.000000, -2314.000000)">
+            <g id="Block-4" transform="translate(112.000000, 2226.000000)">
+                <g id="Group-81" transform="translate(95.000000, 88.000000)">
+                    <g id="Icon-Two" transform="translate(360.000000, 0.000000)">
+                        <circle id="Oval-7-Copy" stroke="#0069FF" stroke-width="2" opacity="0.300000012" cx="58" cy="58" r="49"></circle>
+                        <circle id="Oval-7" stroke="#0069FF" stroke-width="2" opacity="0.238564312" cx="58" cy="58" r="53"></circle>
+                        <circle id="Oval-7" stroke="#0069FF" stroke-width="2" opacity="0.08" cx="58" cy="58" r="57"></circle>
+                        <path d="M47,51.03125 L47,51.0546875 L50.1171875,51.0546875 L50.1171875,51.03125 C50.1640625,46.765625 53.1875,43.8125 57.546875,43.8125 C61.6953125,43.8125 64.90625,46.7421875 64.90625,50.515625 C64.90625,53.421875 63.7109375,55.4375 59,60.5 L47.1875,73.2734375 L47.1875,75.5234375 L68.9609375,75.5234375 L68.9609375,72.6171875 L51.8046875,72.6171875 L51.8046875,72.3359375 L60.9453125,62.5859375 C66.5,56.65625 68.1171875,53.9140625 68.1171875,50.3984375 C68.1171875,45.078125 63.5703125,41 57.6171875,41 C51.5,41 47.046875,45.1953125 47,51.03125 Z" id="2" fill="#0069FF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
