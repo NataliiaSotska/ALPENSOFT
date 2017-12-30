@@ -33,12 +33,16 @@
   user-select: none;
 
   &-primary {
+    padding: 1.8rem 5.2rem 1.6rem;
     background-color: $btn-primary;
     color: $white;
-    //box-shadow: 0 4px 8px 0 rgba($btn-shadow, .32), 0 7px 17px 0 rgba($black, .2);
 
     &:hover {
       background-color: lighten($btn-primary, 10%);
+    }
+
+    &.gradient {
+      background: linear-gradient(180deg, $gradient-blue-1 0%, $gradient-blue-2 46.23%, $gradient-blue-1 100%);
     }
   }
 

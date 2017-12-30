@@ -28,6 +28,11 @@
     cursor: pointer;
     animation: blink 2s linear infinite 5s;
   }
+
+  .btn-field {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 

@@ -1,0 +1,22 @@
+.feature {
+  margin-bottom: 4.8rem;
+
+  &-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+
+    .icon-block {
+      margin-right: .8rem;
+
+      img {
+        display: block;
+      }
+    }
+
+    .heading {
+      margin: 0;
+      font-weight: 400;
+    }
+  }
+}

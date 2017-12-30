@@ -37,14 +37,14 @@ $size-h1: (
 
 $size-h2: (
   null   : (2rem, line_height(32, 20), 2rem),
-  medium : (2.8rem, line_height(32, 28), 2.2rem),
+  medium : (2.8rem, line_height(32, 32), 2.2rem),
   xlarge : 2.8rem
 );
 
 $size-h3: (
-  null   : (2.2rem, line_height(25, 22), 2rem),
-  medium : (2.4rem, line_height(30, 24), 2.2rem),
-  xlarge : 2.8rem
+  null   : (1.6rem, line_height(24, 16), 2rem),
+  medium : (1.8rem, line_height(24, 18), 2.2rem),
+  xlarge : (2.4rem, line_height(32, 24), 2.2rem)
 );
 
 $size-h4: (
