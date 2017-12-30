@@ -1,3 +1,70 @@
+'use strict';
+
+const App = {
+    SMALL_SCREEN_WIDTH: 540,
+    MEDIUM_SCREEN_WIDTH: 768,
+    LARGE_SCREEN_WIDTH: 1024,
+    XLARGE_SCREEN_WIDTH: 1200
+};
+
+window.debounce = function(func, ms) {
+
+    var shouldExec = true;
+
+    return function() {
+        if (!shouldExec) {
+            return;
+        }
+
+        func.apply(this, arguments);
+
+        shouldExec = false;
+
+        setTimeout(function() { shouldExec = true }, ms);
+    }
+};
+(function ($) {
+    'use strict';
+
+    $(document).ready(function () {
+
+        var $fixedSection = $('.fixedSection');
+        var $fixedSectionContent = $fixedSection.find('.fixedSectionContent');
+        var $fixedSectionPlaceholder = $fixedSection.find('.fixedSectionPlaceholder');
+
+        function makeFixedSection() {
+
+            if(window.innerWidth > App.MEDIUM_SCREEN_WIDTH) {
+                $fixedSectionContent.css({
+                    'position': 'fixed',
+                    'top': 0,
+                    'left': 0,
+                    'right': 0
+                });
+
+                $fixedSectionPlaceholder.css({
+                    'height': $fixedSectionContent.outerHeight(true)
+                });
+            } else {
+                $fixedSectionContent.css({
+                    'position': 'relative'
+                });
+
+                $fixedSectionPlaceholder.css({
+                    'height': 'auto'
+                });
+            }
+        }
+
+        if($fixedSection && $fixedSectionContent && $fixedSectionPlaceholder) {
+
+            makeFixedSection();
+
+            $(window).on('resize', debounce(makeFixedSection, 150));
+        }
+    });
+
+})(jQuery);
 (function ($) {
     'use strict';
 

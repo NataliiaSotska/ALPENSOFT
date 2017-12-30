@@ -1,9 +1,10 @@
 @import './colors/project_default';
 
 // General ---------------
-$main-heading    : $white;
-$hamburger-bg    : rgba(color('default', 'dark-gray'), .87);
-$section-dark-bg : color('default', 'dark-blue');
+$main-heading     : $white;
+$hamburger-bg     : rgba(color('default', 'dark-gray'), .87);
+$section-dark-bg  : color('default', 'dark-blue');
+$section-light-bg : color('default', 'light-gray');
 // -----------------------
 
 // Header ----------------

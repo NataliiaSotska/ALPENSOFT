@@ -1,10 +1,12 @@
 .first-screen {
-  @extend %fitBackground;
-  margin-top: $header-height;
   height: 33.2rem;
+  margin-top: $header-height;
   padding: 1.8rem 0 1.6rem;
   background: {
     image: url('../img/first-screen-bg.jpg');
+    repeat: no-repeat;
+    position: center center;
+    size: cover;
   };
 
   .main-heading {
@@ -12,7 +14,6 @@
     color: $main-heading;
     font-weight: 600;
     text-align: center;
-    text-shadow: 0 0 2px 0 rgba($base-text, .16);
   }
 
   .container {
@@ -36,7 +37,8 @@
     padding: 6.4rem 0 1.6rem;
     background: {
       image: url('../img/first-screen-bg.jpg');
-    };
+    }
+  ;
 
     .main-heading {
       padding: 0 16rem;

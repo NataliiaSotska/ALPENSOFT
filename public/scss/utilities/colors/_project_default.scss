@@ -6,8 +6,8 @@ $white : #fff !default;
 $colors-default : (
   'blue'       : #2687fb,
   'dark-blue'  : #30323E,
-  'light-gray' : #bdbdbd,
-  'gray'       : #616161,
+  'light-gray' : #f7f7f7,
+  'gray'       : #bdbdbd,
   'dark-gray'  : #141622
 );
 
@@ -43,5 +43,5 @@ $colors : (
 $base-bg     : $white;
 $base-text   : rgba(color('default', 'dark-gray'), .87);
 $base-link   : color('default', 'blue');
-$base-border : color('default', 'light-gray');
+$base-border : color('default', 'gray');
 // -----------------------
