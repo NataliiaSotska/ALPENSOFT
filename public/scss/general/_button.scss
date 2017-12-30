@@ -35,7 +35,7 @@
   &-primary {
     background-color: $btn-primary;
     color: $white;
-    box-shadow: 0 4px 8px 0 rgba($btn-shadow, .32), 0 7px 17px 0 rgba($black, .2);
+    //box-shadow: 0 4px 8px 0 rgba($btn-shadow, .32), 0 7px 17px 0 rgba($black, .2);
 
     &:hover {
       background-color: lighten($btn-primary, 10%);

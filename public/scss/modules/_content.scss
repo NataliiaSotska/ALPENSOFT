@@ -1,5 +1,45 @@
 .section {
+  padding: 3.2rem 0 1.6rem;
+
   .section-heading {
+    position: relative;
+    margin: 0 0 3.2rem;
     text-align: center;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: calc(100% + 1.6rem);
+      left: 50%;
+      width: 12rem;
+      height: .1rem;
+      background-color: $base-text;
+      transform: translate(-50%, 0);
+    }
   }
+
+  .arrow-down {
+    width: 2.4rem;
+    margin: 0 auto;
+    opacity: 0;
+    cursor: pointer;
+    animation: blink 2s linear infinite 5s;
+  }
+}
+
+
+@media (min-width: $medium-screen) {
+  .section {
+    padding: 8rem 0 1.6rem;
+
+    .section-heading {
+      margin: 0 0 5rem;
+    }
+  }
+}
+
+@keyframes blink {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
 }

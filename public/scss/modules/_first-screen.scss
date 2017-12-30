@@ -1,7 +1,8 @@
 .first-screen {
   @extend %fitBackground;
+  margin-top: $header-height;
   height: 33.2rem;
-  padding: 1.8rem 1rem 1.6rem;
+  padding: 1.8rem 0 1.6rem;
   background: {
     image: url('../img/first-screen-bg.jpg');
   };
@@ -12,12 +13,6 @@
     font-weight: 600;
     text-align: center;
     text-shadow: 0 0 2px 0 rgba($base-text, .16);
-  }
-
-  .arrow-down {
-    opacity: 0;
-    cursor: pointer;
-    animation: blink 2s linear infinite 5s;
   }
 
   .container {
@@ -31,13 +26,13 @@
 
 @media (min-width: $medium-screen) {
   .first-screen {
-    height: 58.4rem;
+    //height: 58.4rem;
+    height: calc(100vh - #{$header-height});
   }
 }
 
 @media (min-width: $large-screen) {
   .first-screen {
-    height: calc(100vh - #{$header-height});
     padding: 6.4rem 0 1.6rem;
     background: {
       image: url('../img/first-screen-bg.jpg');
@@ -47,10 +42,4 @@
       padding: 0 16rem;
     }
   }
-}
-
-@keyframes blink {
-  0% {opacity: 0;}
-  50% {opacity: 1;}
-  100% {opacity: 0;}
 }

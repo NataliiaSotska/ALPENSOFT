@@ -44,9 +44,9 @@
 }
 
 .col {
-  display: flex;
+  //display: flex;
   box-sizing: border-box;
-  flex: 0 0 auto;
+  //flex: 0 0 auto;
   width: 100%; // hook for one column
   padding-right: ($gutter-width / 2);
   padding-left: ($gutter-width / 2);
@@ -56,14 +56,14 @@
   }
 }
 
-@media (max-width: $small-screen-down) {
+@media (max-width: $large-screen-down) {
   .container {
-    padding-right: ($gutter-width / 2.5);
-    padding-left: ($gutter-width / 2.5);
+    padding-right: ($gutter-width);
+    padding-left: ($gutter-width);
     
     &-full {
-      padding-right: ($gutter-width / 2.5);
-      padding-left: ($gutter-width / 2.5);
+      padding-right: ($gutter-width);
+      padding-left: ($gutter-width);
     }
   }
   

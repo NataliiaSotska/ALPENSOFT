@@ -1,15 +1,16 @@
 @import './colors/project_default';
 
 // General ---------------
-$main-heading: $white;
-$hamburger-bg: rgba(color('default', 'dark-gray'), .87);
+$main-heading    : $white;
+$hamburger-bg    : rgba(color('default', 'dark-gray'), .87);
+$section-dark-bg : color('default', 'dark-blue');
 // -----------------------
 
-// Header ---------------
+// Header ----------------
 
 // -----------------------
 
-// Nav-bar ----------------
+// Nav-bar ---------------
 
 // -----------------------
 
@@ -18,9 +19,9 @@ $hamburger-bg: rgba(color('default', 'dark-gray'), .87);
 // -----------------------
 
 // Buttons ---------------
-$btn-text   : $white;
-$btn-primary   : color('state', 'blue');
-$btn-shadow: color('default', 'blue');
+$btn-text       : $white;
+$btn-primary    : color('state', 'blue');
+$btn-shadow     : color('default', 'blue');
 // -----------------------
 
 // Tables ----------------
