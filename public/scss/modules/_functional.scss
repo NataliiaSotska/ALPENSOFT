@@ -1,0 +1,19 @@
+.functional {
+  color: rgba($base-text, .64);
+
+  .row {
+    margin-bottom: 4rem;
+  }
+
+  .second-heading {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .functional {
+    .row {
+      margin-bottom: 5.6rem;
+    }
+  }
+}

@@ -7,6 +7,7 @@
   .section-heading {
     position: relative;
     margin: 0 0 3.2rem;
+    color: rgba($base-text, .87);
     text-align: center;
 
     &::after {
@@ -16,13 +17,14 @@
       left: 50%;
       width: 12rem;
       height: .1rem;
-      background-color: $base-text;
+      background-color: rgba($base-text, .87);
       transform: translate(-50%, 0);
     }
   }
 
   .second-heading {
     margin: 0;
+    color: rgba($base-text, .87);
     font-weight: 400;
   }
 
@@ -37,6 +39,20 @@
   .btn-field {
     display: flex;
     justify-content: center;
+  }
+
+  .list {
+    margin-left: .8rem;
+    padding-left: 1.6rem;
+    list-style: disc;
+  }
+
+  .accent {
+    font-weight: 500;
+  }
+
+  .flex-center {
+    @extend %flexCenter;
   }
 }
 

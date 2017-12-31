@@ -185,6 +185,11 @@ body {
 .clearfix::after {
   clear: both; }
 
+.section .flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 * {
   box-sizing: border-box; }
   *::before, *::after {
@@ -411,6 +416,11 @@ body {
 
 .clearfix::after {
   clear: both; }
+
+.section .flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 @media (min-width: 544px) {
   .container {
@@ -1207,6 +1217,7 @@ label {
   .section .section-heading {
     position: relative;
     margin: 0 0 3.2rem;
+    color: rgba(20, 22, 34, 0.87);
     text-align: center; }
     .section .section-heading::after {
       position: absolute;
@@ -1219,6 +1230,7 @@ label {
       transform: translate(-50%, 0); }
   .section .second-heading {
     margin: 0;
+    color: rgba(20, 22, 34, 0.87);
     font-weight: 400; }
   .section .arrow-down {
     width: 2.4rem;
@@ -1229,6 +1241,12 @@ label {
   .section .btn-field {
     display: flex;
     justify-content: center; }
+  .section .list {
+    margin-left: .8rem;
+    padding-left: 1.6rem;
+    list-style: disc; }
+  .section .accent {
+    font-weight: 500; }
 
 @media (min-width: 768px) {
   .section {
@@ -1342,13 +1360,15 @@ label {
 
 .about {
   padding-bottom: 1.6rem;
-  background: #30323E;
+  background: #30323e;
   color: rgba(255, 255, 255, 0.87); }
   .about iframe {
     width: 100%;
     height: 100%; }
-  .about .section-heading::after {
-    background-color: rgba(255, 255, 255, 0.87); }
+  .about .section-heading {
+    color: rgba(255, 255, 255, 0.87); }
+    .about .section-heading::after {
+      background-color: rgba(255, 255, 255, 0.87); }
   .about .video-wrapper {
     position: relative;
     width: 100%;
@@ -1436,6 +1456,17 @@ label {
       top: 5.8rem;
       left: 100%;
       transform: translate(-50%, -50%); } }
+
+.functional {
+  color: rgba(20, 22, 34, 0.64); }
+  .functional .row {
+    margin-bottom: 4rem; }
+  .functional .second-heading {
+    margin-bottom: 1.6rem; }
+
+@media (min-width: 768px) {
+  .functional .row {
+    margin-bottom: 5.6rem; } }
 
 .hide {
   display: none !important; }
