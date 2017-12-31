@@ -2,15 +2,15 @@
 
 // General ---------------
 $main-heading     : $white;
-$hamburger-bg     : rgba(color('default', 'dark-gray'), .87);
-$section-dark-bg  : color('default', 'dark-blue');
+$hamburger-bg     : rgba(color('default', 'dark-blue'), .87);
+$section-dark-bg  : color('default', 'blue');
 $section-light-bg : color('default', 'light-gray');
 // -----------------------
 
 // Buttons ---------------
 $btn-text       : $white;
 $btn-primary    : color('state', 'blue');
-$btn-shadow     : color('default', 'blue');
+$btn-shadow     : color('default', 'light-blue');
 $btn-gradient-1 : $gradient-blue-1;
 $btn-gradient-2 : $gradient-blue-2;
 // -----------------------

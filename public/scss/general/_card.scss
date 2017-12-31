@@ -1,0 +1,14 @@
+.card {
+  margin-bottom: 2.4rem;
+  padding: 2.4rem;
+  border-radius: .4rem;
+  background: $white;
+  box-shadow: inset 0 0 1px 0 rgba($black, .3), 0 0 1px 0 rgba($black, .24), 0 2px 4px 0 rgba($black, .08);
+  text-align: center;
+}
+
+@media (min-width: $large-screen) {
+  .card {
+    padding: 2.4rem 1.6rem;
+  }
+}

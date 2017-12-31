@@ -4,11 +4,10 @@ $white : #fff !default;
 // -----------------------
 
 $colors-default : (
-  'blue'       : #2687fb,
-  'dark-blue'  : #30323e,
+  'light-blue' : #2687fb,
+  'blue'       : #30323e,
+  'dark-blue'  : #141622,
   'light-gray' : #f7f7f7,
-  'gray'       : #bdbdbd,
-  'dark-gray'  : #141622
 );
 
 $colors-state : (
@@ -44,7 +43,7 @@ $colors : (
 
 // Base ------------------
 $base-bg     : $white;
-$base-text   : color('default', 'dark-gray');
-$base-link   : color('default', 'blue');
-$base-border : color('default', 'gray');
+$base-text   : color('default', 'dark-blue');
+$base-link   : color('default', 'light-blue');
+$base-border : rgba(color('default', 'dark-blue'), .08);
 // -----------------------
