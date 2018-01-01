@@ -54,6 +54,10 @@
   .flex-center {
     @extend %flexCenter;
   }
+
+  .col-inner {
+    width: 100%;
+  }
 }
 
 

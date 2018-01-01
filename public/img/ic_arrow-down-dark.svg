@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon Down</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Ver4.3" transform="translate(-628.000000, -680.000000)">
+            <g id="Block1">
+                <g id="Icon-Down" transform="translate(628.000000, 680.000000)">
+                    <rect id="Bounds" x="0" y="0" width="24" height="24"></rect>
+                    <g id="Group" opacity="0.87" transform="translate(5.000000, 9.000000)" fill="#141622">
+                        <path d="M6.5,5.82842712 L0.707106781,0.0355339059 L4.4408921e-16,0.742640687 L6.36396103,7.10660172 L6.53553391,6.93502884 L6.67157288,7.07106781 L13.0355339,0.707106781 L12.3284271,0 L6.5,5.82842712 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

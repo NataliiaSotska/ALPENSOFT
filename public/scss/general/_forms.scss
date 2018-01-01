@@ -17,10 +17,9 @@ select {
   padding: .6rem 1rem;
   border: {
     width: 0;
-    style: solid;
-    color: $base-border;
     radius: .2rem;
-  };
+  }
+;
   font-weight: 400;
 }
 
@@ -30,4 +29,92 @@ textarea {
 
 label {
   font-weight: 400;
+}
+
+.cta-form {
+  input[type='tel'],
+  input[type='text'],
+  input[type='email'],
+  input[type='number'],
+  input[type='search'],
+  input[type='password'],
+  textarea {
+    display: block;
+    padding: 1rem 0 .5rem;
+    border: {
+      bottom-width: .1rem;
+      style: solid;
+      color: $base-border;
+    };
+  }
+
+  .input-field {
+    margin-bottom: 2.4rem;
+  }
+}
+
+
+// Styles for custom select -----
+
+.selectric-wrapper {
+  text-align: left;
+
+  &.selectric-hover,
+  &.selectric-focus,
+  &.selectric-open {
+
+    .selectric {
+      border-color: $base-border;
+    }
+  }
+}
+
+.selectric {
+  border: 0;
+  border-bottom: .1rem solid $base-border;
+  background: $white;
+
+  .label {
+    height: 48px;
+    margin: 0 38px 0 0;
+    color: rgba($base-text, .87);
+    line-height: 48px;
+  }
+
+  .button {
+    height: 48px;
+    background-color: transparent;
+    line-height: 48px;
+
+    &::after {
+      content: '';
+      width: 2.4rem;
+      height: 2.4rem;
+      background: {
+        image: url('../img/ic_arrow-down-dark.svg');
+        repeat: no-repeat;
+        size: contain;
+      };
+      border: 0;
+    }
+  }
+}
+
+.selectric-items {
+  border: 0;
+  border-radius: 0 0 .4rem .4rem;
+  background-color: rgba($white, .95);
+  box-shadow: 0 4px 4px 0 rgba($black, .08);
+
+  li {
+    padding: .8rem 1.6rem;
+  }
+
+  li.selected,
+  li.highlighted,
+  li:hover {
+    background: transparent;
+    color: rgba($base-text, .87);
+    text-decoration: underline;
+  }
 }
