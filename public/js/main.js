@@ -1,6 +1,4 @@
-'use strict';
-
-const App = {
+var App = {
     SMALL_SCREEN_WIDTH: 540,
     MEDIUM_SCREEN_WIDTH: 768,
     LARGE_SCREEN_WIDTH: 1024,
@@ -20,8 +18,8 @@ window.debounce = function(func, ms) {
 
         shouldExec = false;
 
-        setTimeout(function() { shouldExec = true }, ms);
-    }
+        setTimeout(function() { shouldExec = true; }, ms);
+    };
 };
 (function ($) {
     'use strict';
