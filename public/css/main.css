@@ -334,18 +334,18 @@ h4 {
       margin-bottom: 0.61111em; } }
 
 h5 {
-  font-size: 1.6rem;
-  line-height: 1.25;
-  margin-top: 1.875em;
-  margin-bottom: 0.625em; }
+  font-size: 1.4rem;
+  line-height: 1.71429;
+  margin-top: 2.14286em;
+  margin-bottom: 0.71429em; }
   @media (min-width: 768px) {
     h5 {
-      font-size: 1.6rem;
-      line-height: 1.375; } }
+      font-size: 1.4rem;
+      line-height: 1.71429; } }
   @media (min-width: 768px) {
     h5 {
-      margin-top: 2.0625em;
-      margin-bottom: 0.6875em; } }
+      margin-top: 2.35714em;
+      margin-bottom: 0.78571em; } }
 
 h6 {
   font-size: 1.4rem;
@@ -960,20 +960,7 @@ html {
   min-height: 100%; }
   html body {
     height: 100%;
-    min-height: .1rem;
-    margin-bottom: 0; }
-  @media (min-width: 544px) {
-    html body {
-      margin-bottom: 0; } }
-  @media (min-width: 768px) {
-    html body {
-      margin-bottom: 0; } }
-  @media (min-width: 1024px) {
-    html body {
-      margin-bottom: 0; } }
-  @media (min-width: 1200px) {
-    html body {
-      margin-bottom: 0; } }
+    min-height: .1rem; }
 
 .wrapper {
   width: 100%; }
@@ -1275,23 +1262,24 @@ label {
     opacity: 0; } }
 
 .main-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  min-height: 0; }
-  @media (min-width: 544px) {
-    .main-footer {
-      min-height: 0; } }
-  @media (min-width: 768px) {
-    .main-footer {
-      min-height: 0; } }
-  @media (min-width: 1024px) {
-    .main-footer {
-      min-height: 0; } }
-  @media (min-width: 1200px) {
-    .main-footer {
-      min-height: 0; } }
+  position: relative;
+  padding: 3.2rem 0 2.4rem;
+  background: #30323e;
+  color: #fff;
+  z-index: 1; }
+  .main-footer .footer-heading {
+    margin: 0 0 1.2rem;
+    opacity: .4;
+    text-transform: uppercase; }
+  .main-footer .footer-nav-list {
+    margin-bottom: 2.4rem; }
+    .main-footer .footer-nav-list-item {
+      margin-bottom: 1.2rem; }
+      .main-footer .footer-nav-list-item a {
+        color: #fff; }
+  .main-footer .copyright {
+    color: #959595;
+    text-align: center; }
 
 .hamburger {
   display: inline-block;

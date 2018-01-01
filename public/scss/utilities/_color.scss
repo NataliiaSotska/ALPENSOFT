@@ -8,9 +8,14 @@ $section-light-bg : color('default', 'light-gray');
 // -----------------------
 
 // Buttons ---------------
-$btn-text       : $white;
-$btn-primary    : color('state', 'blue');
-$btn-shadow     : color('default', 'light-blue');
-$btn-gradient-1 : $gradient-blue-1;
-$btn-gradient-2 : $gradient-blue-2;
+$btn-text         : $white;
+$btn-primary      : color('state', 'blue');
+$btn-shadow       : color('default', 'light-blue');
+$btn-gradient-1   : $gradient-blue-1;
+$btn-gradient-2   : $gradient-blue-2;
+// -----------------------
+
+// Footer ----------------
+$footer-bg        : color('default', 'blue');
+$copyright-color  : color('default', 'gray');
 // -----------------------

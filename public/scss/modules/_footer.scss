@@ -1,26 +1,32 @@
 @import '../utilities/variables';
 
-// Footer block style
-.main-footer { // Footer fixed to bottom
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  min-height: var('footer-height', 'xsmall');
-  
-  @media (min-width: $small-screen) {
-    min-height: var('footer-height', 'small');
+.main-footer {
+  position: relative;
+  padding: 3.2rem 0 2.4rem;
+  background: $footer-bg;
+  color: $white;
+  z-index: 1;
+
+  .footer-heading {
+    margin: 0 0 1.2rem;
+    opacity: .4;
+    text-transform: uppercase;
   }
-  
-  @media (min-width: $medium-screen) {
-    min-height: var('footer-height', 'medium');
+
+  .footer-nav-list {
+    margin-bottom: 2.4rem;
+
+    &-item {
+      margin-bottom: 1.2rem;
+
+      a {
+        color: $white;
+      }
+    }
   }
-  
-  @media (min-width: $large-screen) {
-    min-height: var('footer-height', 'large');
-  }
-  
-  @media (min-width: $xlarge-screen) {
-    min-height: var('footer-height', 'xlarge');
+
+  .copyright {
+    color: $copyright-color;
+    text-align: center;
   }
 }
