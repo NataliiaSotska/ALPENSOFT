@@ -61,7 +61,7 @@
       margin-bottom: 4.8rem;
     }
 
-    .cta-row {
+    .cta-row-wrapper {
       .description {
         margin-bottom: 0;
       }
@@ -71,7 +71,9 @@
         align-items: center;
       }
     }
+  }
 
+  .cta-form {
     .btn-field {
       justify-content: flex-end;
 
@@ -98,36 +100,34 @@
       margin-bottom: 8rem;
     }
 
-    .cta-row {
+    .cta-row-wrapper {
       background-color: $cta-row-bg;
 
-      .row {
+      .cta-row {
         min-height: 28.8rem;
       }
+
+      .cta-form-wrapper {
+        position: relative;
+      }
+
+      .cta-form {
+        position: absolute;
+        top: -2.4rem;
+        left: 1.2rem;
+        right: 1.2rem;
+        bottom: -2.4rem;
+
+        .col {
+          display: block;
+        }
+      }
     }
+  }
 
-    .cta-form-wrapper {
-      position: relative;
-    }
-
-    .cta-form {
-      position: absolute;
-      top: -2.4rem;
-      left: 1.2rem;
-      right: 1.2rem;
-      bottom: -2.4rem;
-
-      .form-label {
-        margin: 0;
-      }
-
-      .row {
-        min-height: .1rem;
-      }
-
-      .col {
-        display: block;
-      }
+  .cta-form {
+    .form-label {
+      margin: 0;
     }
   }
 }

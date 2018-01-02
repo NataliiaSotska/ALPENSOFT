@@ -1407,9 +1407,11 @@ label {
   display: block;
   margin-bottom: .4rem;
   padding: .4rem 0;
-  border-bottom: .1rem solid #e7e7e7;
+  border-bottom: 0.1rem solid rgba(20, 22, 34, 0.08);
   font-size: 2rem;
   font-weight: 500; }
+  .nav-list .main-item .icon-down {
+    display: none; }
 
 .sub-nav-list-item {
   padding: .4rem 0; }
@@ -1448,12 +1450,15 @@ label {
         opacity: 1;
         visibility: visible; }
     .nav-list .main-item {
-      display: block;
+      display: flex;
       margin-bottom: 0;
       padding: 0;
       border-bottom: 0;
       font-size: 1.4rem;
       font-weight: 400; }
+      .nav-list .main-item .icon-down {
+        display: block;
+        width: 1.6rem; }
     .nav-list .sub-nav-list {
       position: absolute;
       top: 5.6rem;
@@ -1476,7 +1481,7 @@ label {
   position: relative;
   padding-top: 3.2rem;
   background: #f7f7f7;
-  z-index: 1; }
+  z-index: 2; }
   .section .section-heading {
     position: relative;
     margin: 0 0 3.2rem;
@@ -1634,7 +1639,7 @@ label {
   .about .section-heading {
     color: rgba(255, 255, 255, 0.87); }
     .about .section-heading::after {
-      background-color: rgba(255, 255, 255, 0.87); }
+      display: none; }
   .about .video-wrapper {
     position: relative;
     width: 100%;
@@ -1707,21 +1712,30 @@ label {
     margin: 1.6rem 0 .8rem; }
   .quick-start .info-block .arrow {
     display: none; }
+  .quick-start .info-block .btn-field {
+    margin-top: 1.6rem; }
 
 @media (min-width: 768px) {
   .quick-start .info-block {
-    position: relative;
-    text-align: left; }
+    position: relative; }
     .quick-start .info-block .second-heading {
       margin: 2.4rem 0 1.6rem; }
-    .quick-start .info-block .icon-wrapper {
-      text-align: center; }
+    .quick-start .info-block .description {
+      text-align: left; }
     .quick-start .info-block .arrow {
       position: absolute;
       display: block;
       top: 5.8rem;
       left: 100%;
       transform: translate(-50%, -50%); } }
+
+@media (min-width: 1024px) {
+  .quick-start .col .info-block {
+    padding: 0 1.6rem; }
+  .quick-start .col:first-child .info-block {
+    padding-left: 0; }
+  .quick-start .col:last-child .info-block {
+    padding-right: 0; } }
 
 .functional {
   color: rgba(20, 22, 34, 0.64); }
@@ -1731,6 +1745,8 @@ label {
       padding-bottom: 0; }
   .functional .second-heading {
     margin-bottom: 1.6rem; }
+  .functional .btn-field {
+    margin-top: 1.6rem; }
 
 @media (min-width: 768px) {
   .functional .row {
@@ -1796,7 +1812,12 @@ label {
   .map .second-heading {
     margin-bottom: .8rem; }
   .map .description {
-    margin-bottom: 2.4rem; }
+    margin-bottom: 2.4rem;
+    text-align: left; }
+
+@media (min-width: 1024px) {
+  .map .description {
+    padding: 0 18rem; } }
 
 .cta-section {
   padding: 4rem 0;
@@ -1838,15 +1859,15 @@ label {
       margin-bottom: 1.6rem; }
     .cta-section .description {
       margin-bottom: 4.8rem; }
-    .cta-section .cta-row .description {
+    .cta-section .cta-row-wrapper .description {
       margin-bottom: 0; }
-    .cta-section .cta-row .col {
+    .cta-section .cta-row-wrapper .col {
       display: flex;
       align-items: center; }
-    .cta-section .btn-field {
-      justify-content: flex-end; }
-      .cta-section .btn-field .btn {
-        width: auto; } }
+  .cta-form .btn-field {
+    justify-content: flex-end; }
+    .cta-form .btn-field .btn {
+      width: auto; } }
 
 @media (min-width: 1024px) {
   .cta-section {
@@ -1857,24 +1878,22 @@ label {
       margin-bottom: 1.6rem; }
     .cta-section .description {
       margin-bottom: 8rem; }
-    .cta-section .cta-row {
+    .cta-section .cta-row-wrapper {
       background-color: #0069ff; }
-      .cta-section .cta-row .row {
+      .cta-section .cta-row-wrapper .cta-row {
         min-height: 28.8rem; }
-    .cta-section .cta-form-wrapper {
-      position: relative; }
-    .cta-section .cta-form {
-      position: absolute;
-      top: -2.4rem;
-      left: 1.2rem;
-      right: 1.2rem;
-      bottom: -2.4rem; }
-      .cta-section .cta-form .form-label {
-        margin: 0; }
-      .cta-section .cta-form .row {
-        min-height: .1rem; }
-      .cta-section .cta-form .col {
-        display: block; } }
+      .cta-section .cta-row-wrapper .cta-form-wrapper {
+        position: relative; }
+      .cta-section .cta-row-wrapper .cta-form {
+        position: absolute;
+        top: -2.4rem;
+        left: 1.2rem;
+        right: 1.2rem;
+        bottom: -2.4rem; }
+        .cta-section .cta-row-wrapper .cta-form .col {
+          display: block; }
+  .cta-form .form-label {
+    margin: 0; } }
 
 .hide {
   display: none !important; }

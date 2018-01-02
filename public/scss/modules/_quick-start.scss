@@ -15,6 +15,10 @@
     .arrow {
       display: none;
     }
+
+    .btn-field {
+      margin-top: 1.6rem;
+    }
   }
 }
 
@@ -23,14 +27,13 @@
 
     .info-block {
       position: relative;
-      text-align: left;
 
       .second-heading {
         margin: 2.4rem 0 1.6rem;
       }
 
-      .icon-wrapper {
-        text-align: center;
+      .description {
+        text-align: left;
       }
 
       .arrow {
@@ -39,6 +42,29 @@
         top: 5.8rem;
         left: 100%;
         transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .quick-start {
+
+    .col {
+      .info-block {
+        padding: 0 1.6rem;
+      }
+
+      &:first-child {
+        .info-block {
+          padding-left: 0;
+        }
+      }
+
+      &:last-child {
+        .info-block {
+          padding-right: 0;
+        }
       }
     }
   }

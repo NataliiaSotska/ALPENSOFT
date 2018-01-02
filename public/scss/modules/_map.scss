@@ -8,5 +8,14 @@
 
   .description {
     margin-bottom: 2.4rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: $large-screen) {
+  .map {
+    .description {
+      padding: 0 18rem;
+    }
   }
 }
