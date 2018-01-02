@@ -1,0 +1,52 @@
+@import '../utilities/color';
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 2.4rem;
+  right: 2.4rem;
+  transform: translate(0, -50%);
+  z-index: 1050;
+  animation: modalFadeInDown .45s both;
+
+  &-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $modal-backdrop;
+    z-index: 1040;
+  }
+}
+
+@media (min-width: $small-screen) {
+  .modal {
+    left: 3.8rem;
+    right: 3.8rem;
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .modal {
+    left: 50%;
+    right: auto;
+    width: 51.6rem;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes modalFadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+

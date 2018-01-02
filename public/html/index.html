@@ -384,7 +384,7 @@
                   </li>
                 </ul>
                 <div class="btn-field">
-                  <button class="btn btn-text">Попробовать</button>
+                  <button class="btn btn-text openConversionForm">Попробовать</button>
                 </div>
               </div>
             </div>
@@ -414,7 +414,7 @@
                   </li>
                 </ul>
                 <div class="btn-field">
-                  <button class="btn btn-text">Попробовать</button>
+                  <button class="btn btn-text openConversionForm">Попробовать</button>
                 </div>
               </div>
             </div>
@@ -444,7 +444,7 @@
                   </li>
                 </ul>
                 <div class="btn-field">
-                  <button class="btn btn-text">Попробовать</button>
+                  <button class="btn btn-text openConversionForm">Попробовать</button>
                 </div>
               </div>
             </div>
@@ -474,7 +474,7 @@
                   </li>
                 </ul>
                 <div class="btn-field">
-                  <button class="btn btn-text">Попробовать</button>
+                  <button class="btn btn-text openConversionForm">Попробовать</button>
                 </div>
               </div>
             </div>
@@ -629,8 +629,60 @@
   </footer>
 
   <!-- ----- Modal ----- -->
+  <div class="modal-holder hide" id="ctaForm">
+    <div class="modal">
+      <div class="cta-form card">
+        <form action="">
 
+          <h5 class="form-label">Заполните форму:</h5>
+          <div class="row">
+            <div class="col m-6">
+              <div class="input-field">
+                <input type="tel" placeholder="Телефон">
+              </div>
+            </div>
 
+            <div class="col m-6">
+              <div class="input-field">
+                <input type="email" placeholder="Email">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col m-6">
+              <div class="input-field">
+                <select>
+                  <option value="1">Вид заведения</option>
+                  <option value="2">Ресторан</option>
+                  <option value="3">Магазин</option>
+                </select>
+              </div>
+            </div>
+            <div class="col m-6">
+              <div class="input-field">
+                <select>
+                  <option value="1">Package of services type</option>
+                  <option value="2">Package 1</option>
+                  <option value="3">Package 2</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input-field">
+                  <textarea name=""
+                            placeholder="Ваш вопрос или дополнительная информация"></textarea>
+          </div>
+
+          <div class="btn-field">
+            <button type="submit" class="btn btn-primary gradient">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-backdrop"></div>
+  </div>
 
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../../node_modules/jquery.inputmask/dist/jquery.inputmask.bundle.js"></script>

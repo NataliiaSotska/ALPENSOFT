@@ -101,22 +101,22 @@
 
         // ----- Modal -----
 
-        // var $popup         = $('.popup');
-        // var $popupBackdrop = $('.popup-backdrop');
-        //
-        // $(document).ready(function () {
-        //     $popupBackdrop.on('click', function () {
-        //         $popup.toggleClass('hide');
-        //         $popupBackdrop.toggleClass('hide');
-        //     });
-        // });
-        //
-        // $(document).on('click', '[data-popup-id]', function () {
-        //     var $popupId = $(this).attr('data-popup-id');
-        //
-        //     $('#' + $popupId).toggleClass('hide');
-        //     $popupBackdrop.toggleClass('hide');
-        // });
+        var $modal         = $('#ctaForm');
+        var $modalBackdrop = $('.modal-backdrop');
+        var $openCtaButton = $('.openConversionForm');
+
+        $(document).ready(function () {
+
+            $openCtaButton.on('click', function () {
+                $modal.toggleClass('hide');
+                $html.toggleClass('overflow-hidden');
+            });
+
+            $modalBackdrop.on('click', function () {
+                $modal.toggleClass('hide');
+                $html.toggleClass('overflow-hidden');
+            });
+        });
     });
 
 })(jQuery);
