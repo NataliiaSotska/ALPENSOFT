@@ -1291,10 +1291,22 @@ label {
       background-color: #3387ff; }
     .btn-primary.gradient {
       background: linear-gradient(180deg, #3490fe 0%, #0060e9 46.23%, #3490fe 100%); }
+  .btn-bordered {
+    padding: 1.8rem 8.7rem 1.6rem;
+    border-width: .1rem;
+    border-style: solid;
+    border-color: #0069ff;
+    color: #0069ff; }
+    .btn-bordered:hover {
+      border-color: #0069ff;
+      background-color: #0069ff;
+      color: #fff; }
   .btn-text {
     padding: 0;
     color: #0069ff;
     line-height: 2.8rem; }
+    .btn-text:hover {
+      color: #3387ff; }
 
 .btn-field {
   display: flex;
@@ -1736,7 +1748,9 @@ label {
     text-align: center; }
 
 .package {
+  max-width: 30.8rem;
   height: calc(100% - 2.4rem);
+  margin: 0 auto 2.4rem;
   text-align: center; }
   .package .package-name {
     margin: 0;
@@ -1793,12 +1807,14 @@ label {
     text-align: left; }
 
 @media (min-width: 1024px) {
-  .map .description {
+  .map .container {
     padding: 0 18rem; } }
 
 .cta-section {
   padding: 4rem 0;
-  background-color: rgba(48, 50, 62, 0.8);
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff; }
   .cta-section .section-heading {
     margin-bottom: 3.8rem;

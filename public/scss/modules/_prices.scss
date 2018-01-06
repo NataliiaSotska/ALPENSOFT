@@ -8,7 +8,9 @@
 }
 
 .package {
+  max-width: 30.8rem;
   height: calc(100% - 2.4rem);
+  margin: 0 auto 2.4rem;
   text-align: center;
 
   .package-name {
