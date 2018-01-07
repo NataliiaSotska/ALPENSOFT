@@ -465,7 +465,7 @@ h4,
 h5,
 h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
-  font-weight: 500; }
+  font-weight: 400; }
 
 h1 {
   font-size: 1.4rem;
@@ -1509,7 +1509,7 @@ label {
 
 @media (min-width: 768px) {
   .section {
-    padding-top: 8rem; }
+    padding-top: 6rem; }
     .section .section-heading {
       margin: 0 0 5rem; } }
 
@@ -1741,11 +1741,9 @@ label {
   .functional .row {
     padding-bottom: 5.6rem; } }
 
-.prices {
-  padding-top: 5.6rem; }
-  .prices .second-heading {
-    margin-bottom: 2.4rem;
-    text-align: center; }
+.prices .second-heading {
+  margin-bottom: 2.4rem;
+  text-align: center; }
 
 .package {
   max-width: 30.8rem;
@@ -1798,7 +1796,7 @@ label {
     padding: 2.4rem 1.4rem; } }
 
 .map {
-  padding: 5.6rem 0 4rem;
+  padding-bottom: 4rem;
   text-align: center; }
   .map .second-heading {
     margin-bottom: .8rem; }

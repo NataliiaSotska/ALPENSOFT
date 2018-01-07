@@ -8,11 +8,11 @@
         XLARGE_SCREEN_WIDTH: 1200
     };
 
-    window.debounce = function(func, ms) {
+    window.debounce = function (func, ms) {
 
         var shouldExec = true;
 
-        return function() {
+        return function () {
             if (!shouldExec) {
                 return;
             }
@@ -21,7 +21,9 @@
 
             shouldExec = false;
 
-            setTimeout(function() { shouldExec = true; }, ms);
+            setTimeout(function () {
+                shouldExec = true;
+            }, ms);
         };
     };
 
@@ -65,7 +67,7 @@
             $(window).on('resize', debounce(makeFixedSection, 200));
         }
 
-        // ----- Header -----
+        // ----- Header navigation -----
 
         var $html = $('html');
         var $headerMenuMobileButton = $('.hamburgerBtn');
@@ -87,6 +89,25 @@
             $headerMenu.slideToggle('fast');
         });
 
+        // ----- Anchor scroll animation -----
+
+        $('a[href^="#"]').on("click", function (e) {
+            var anchor = $(this);
+            var offsetTop = $(anchor.attr("href")).offset().top - 56;
+
+            e.preventDefault();
+
+            $('html, body').stop().animate({
+                scrollTop: offsetTop
+            }, 1000);
+
+            if (window.innerWidth < App.LARGE_SCREEN_WIDTH) {
+                $headerMenuMobileButton.removeClass('is-active');
+                $html.removeClass('overflow-hidden');
+                $headerMenu.slideUp('fast');
+            }
+        });
+
         // ----- Libs initialization -----
 
         var $phoneNumber = $('#phoneNumber');
@@ -101,7 +122,7 @@
 
         // ----- Modal -----
 
-        var $modal         = $('#ctaForm');
+        var $modal = $('#ctaForm');
         var $modalBackdrop = $('.modal-backdrop');
         var $openCtaButton = $('.openConversionForm');
 

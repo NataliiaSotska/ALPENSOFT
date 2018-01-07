@@ -1,4 +1,4 @@
-##ALPENSOFT Frontend
+# ALPENSOFT Frontend
 
 Installing all dependencies: `yarn` or `yarn install`
 
