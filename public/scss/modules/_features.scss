@@ -7,11 +7,20 @@
     margin-bottom: 1.6rem;
 
     .icon-block {
+      min-width: 4.8rem;
       margin-right: .8rem;
 
       img {
         display: block;
       }
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .feature {
+    .icon-block {
+      min-width: 6.4rem;
     }
   }
 }
