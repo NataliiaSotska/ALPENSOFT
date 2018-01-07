@@ -1,6 +1,10 @@
 .cta-section {
   padding: 4rem 0;
-  background-color: rgba(#30323E, .8);
+  background: {
+    image: url("../img/background.png");
+    repeat: no-repeat;
+    size: cover;
+  };
   color: $white;
 
   .section-heading {

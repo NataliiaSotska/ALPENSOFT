@@ -1,5 +1,5 @@
 .map {
-  padding: 5.6rem 0 4rem;
+  padding-bottom: 4rem;
   text-align: center;
 
   .second-heading {
@@ -14,7 +14,7 @@
 
 @media (min-width: $large-screen) {
   .map {
-    .description {
+    .container {
       padding: 0 18rem;
     }
   }

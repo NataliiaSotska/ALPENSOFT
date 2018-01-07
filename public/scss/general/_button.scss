@@ -46,10 +46,30 @@
     }
   }
 
+  &-bordered {
+    padding: 1.8rem 8.7rem 1.6rem;
+    border: {
+      width: .1rem;
+      style: solid;
+      color: $btn-primary;
+    };
+    color: $btn-primary;
+
+    &:hover {
+      border-color: $btn-primary;
+      background-color: $btn-primary;
+      color: $white;
+    }
+  }
+
   &-text {
     padding: 0;
     color: $btn-primary;
     line-height: 2.8rem;
+
+    &:hover {
+      color: lighten($btn-primary, 10%);
+    }
   }
 }
 

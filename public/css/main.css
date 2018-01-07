@@ -465,7 +465,7 @@ h4,
 h5,
 h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
-  font-weight: 500; }
+  font-weight: 400; }
 
 h1 {
   font-size: 1.4rem;
@@ -1291,10 +1291,22 @@ label {
       background-color: #3387ff; }
     .btn-primary.gradient {
       background: linear-gradient(180deg, #3490fe 0%, #0060e9 46.23%, #3490fe 100%); }
+  .btn-bordered {
+    padding: 1.8rem 8.7rem 1.6rem;
+    border-width: .1rem;
+    border-style: solid;
+    border-color: #0069ff;
+    color: #0069ff; }
+    .btn-bordered:hover {
+      border-color: #0069ff;
+      background-color: #0069ff;
+      color: #fff; }
   .btn-text {
     padding: 0;
     color: #0069ff;
     line-height: 2.8rem; }
+    .btn-text:hover {
+      color: #3387ff; }
 
 .btn-field {
   display: flex;
@@ -1497,7 +1509,7 @@ label {
 
 @media (min-width: 768px) {
   .section {
-    padding-top: 8rem; }
+    padding-top: 6rem; }
     .section .section-heading {
       margin: 0 0 5rem; } }
 
@@ -1729,14 +1741,14 @@ label {
   .functional .row {
     padding-bottom: 5.6rem; } }
 
-.prices {
-  padding-top: 5.6rem; }
-  .prices .second-heading {
-    margin-bottom: 2.4rem;
-    text-align: center; }
+.prices .second-heading {
+  margin-bottom: 2.4rem;
+  text-align: center; }
 
 .package {
+  max-width: 30.8rem;
   height: calc(100% - 2.4rem);
+  margin: 0 auto 2.4rem;
   text-align: center; }
   .package .package-name {
     margin: 0;
@@ -1784,7 +1796,7 @@ label {
     padding: 2.4rem 1.4rem; } }
 
 .map {
-  padding: 5.6rem 0 4rem;
+  padding-bottom: 4rem;
   text-align: center; }
   .map .second-heading {
     margin-bottom: .8rem; }
@@ -1793,12 +1805,14 @@ label {
     text-align: left; }
 
 @media (min-width: 1024px) {
-  .map .description {
+  .map .container {
     padding: 0 18rem; } }
 
 .cta-section {
   padding: 4rem 0;
-  background-color: rgba(48, 50, 62, 0.8);
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff; }
   .cta-section .section-heading {
     margin-bottom: 3.8rem;
