@@ -1694,7 +1694,9 @@ label {
 
 @media (min-width: 1024px) {
   .feature .icon-block {
-    min-width: 6.4rem; } }
+    min-width: 6.4rem; }
+  .feature .second-heading {
+    font-size: 2rem; } }
 
 .quick-start .section-heading {
   margin-bottom: 4.8rem; }
