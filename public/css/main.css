@@ -1687,9 +1687,14 @@ label {
     align-items: center;
     margin-bottom: 1.6rem; }
     .feature-heading .icon-block {
+      min-width: 4.8rem;
       margin-right: .8rem; }
       .feature-heading .icon-block img {
         display: block; }
+
+@media (min-width: 1024px) {
+  .feature .icon-block {
+    min-width: 6.4rem; } }
 
 .quick-start .section-heading {
   margin-bottom: 4.8rem; }
