@@ -95,14 +95,15 @@ label {
   background: transparent;
 
   .label {
+    @extend %textOverflow;
     position: absolute;
     bottom: .8rem;
+    max-width: calc(100% - 3.8rem);
     margin: 0 3.8rem 0 0;
     padding: 2rem 0 .5rem;
     color: rgba($base-text, .87);
     font-size: 1.4rem;
     line-height: 1;
-
   }
 
   .button {
