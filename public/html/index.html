@@ -47,21 +47,20 @@
                 <li class="sub-nav-list-item"><a href="#subscribe">Показатели и подписка</a></li>
               </ul>
             </li>
-            <li class="nav-list-item">
-              <a href="" class="main-item">Оборудование</a>
-            </li>
+            <!--<li class="nav-list-item">-->
+            <!--<a href="" class="main-item">Оборудование</a>-->
+            <!--</li>-->
             <li class="nav-list-item hide-xs hide-s hide-m">
               <div class="main-item">
-                <a href="tel:+38 044 55 24 18">+38 044 55 24 18</a>
+                <a href="tel:+380974608026">+38 097 460 80 26</a>
                 <img src="../img/ic_arrow-down-dark.svg" class="icon-down" alt=".">
               </div>
               <ul class="sub-nav-list">
-                <li class="sub-nav-list-item"><a href="tel:+38 044 55 24 19">+38 044 55 24 19</a></li>
-                <li class="sub-nav-list-item"><a href="tel:+38 044 55 20 20">+38 044 55 20 20</a></li>
+                <li class="sub-nav-list-item"><a href="tel:+380506444136">+38 050 644 41 36</a></li>
               </ul>
             </li>
             <li class="nav-list-item hide-xs hide-s hide-m">
-              <button class="btn btn-text openConversionForm">Попробовать бесплатно</button>
+              <button class="btn btn-primary openConversionForm">Попробовать бесплатно</button>
             </li>
           </ul>
         </div>
@@ -538,15 +537,18 @@
 
                   <h5 class="form-label">Заполните форму:</h5>
                   <div class="row">
+
                     <div class="col m-6">
                       <div class="input-field">
-                        <input type="tel" placeholder="Телефон">
+                        <input type="text" id="name">
+                        <label for="name" class="input-label">Ваше имя</label>
                       </div>
                     </div>
 
                     <div class="col m-6">
                       <div class="input-field">
-                        <input type="email" placeholder="Email">
+                        <input type="tel" id="phone">
+                        <label for="phone" class="input-label">Телефон</label>
                       </div>
                     </div>
                   </div>
@@ -554,26 +556,39 @@
                   <div class="row">
                     <div class="col m-6">
                       <div class="input-field">
-                        <select>
-                          <option value="1">Вид заведения</option>
-                          <option value="2">Ресторан</option>
-                          <option value="3">Магазин</option>
-                        </select>
+                        <input type="email" id="email">
+                        <label for="email" class="input-label">Адрес электронной почты</label>
                       </div>
                     </div>
+
                     <div class="col m-6">
                       <div class="input-field">
-                        <select>
-                          <option value="1">Package of services type</option>
-                          <option value="2">Package 1</option>
-                          <option value="3">Package 2</option>
-                        </select>
+                        <input type="text" id="institution">
+                        <label for="institution" class="input-label">Название заведения</label>
                       </div>
                     </div>
                   </div>
-                  <div class="input-field">
-                  <textarea name=""
-                            placeholder="Ваш вопрос или дополнительная информация"></textarea>
+                  <div class="row">
+                    <div class="col m-6">
+                      <div class="input-field">
+                        <select id="institution-type">
+                          <option value="" disabled selected></option>
+                          <option value="1">Ресторан, кафе, бар</option>
+                          <option value="2">Киоск уличной еды, фургон</option>
+                          <option value="3">Магазин, склад</option>
+                          <option value="4">Салон красоты, СПА</option>
+                          <option value="5">Другое</option>
+                        </select>
+                        <label for="institution-type" class="input-label">Формат заведения</label>
+                      </div>
+                    </div>
+
+                    <div class="col m-6">
+                      <div class="input-field">
+                        <input type="text" id="question">
+                        <label for="question" class="input-label">Ваш вопрос</label>
+                      </div>
+                    </div>
                   </div>
 
                   <div class="btn-field">
@@ -602,26 +617,12 @@
             <li class="footer-nav-list-item"><a href="#prices">Цены и решения</a></li>
           </ul>
         </div>
-        <div class="col m-5 l-6">
-          <h5 class="footer-heading">Оборудование</h5>
-          <ul class="footer-nav-list">
-            <li class="footer-nav-list-item"><a href="">Наборы оборудования для работы с SmartTouch</a></li>
-            <li class="footer-nav-list-item"><a href="">Планшеты</a></li>
-            <li class="footer-nav-list-item"><a href="">Док-станции, POS-терминалы</a></li>
-            <li class="footer-nav-list-item"><a href="">Принтеры чеков, портативные принтеры</a></li>
-            <li class="footer-nav-list-item"><a href="">Cканеры штрих-кодов для POS</a></li>
-            <li class="footer-nav-list-item"><a href="">Беспроводные весы для автоматизации продаж и кухни</a></li>
-            <li class="footer-nav-list-item"><a href="">Подставки для планшетов, терминалов официанта, экрана повара</a>
-            </li>
-            <li class="footer-nav-list-item"><a href="">Кассовые ящики для ресторанов, кафе, магазинов, киосков</a></li>
-          </ul>
-        </div>
-        <div class="col m-3 l-2">
+
+        <div class="col m-offset-5 l-offset-6 m-3 l-2">
           <h5 class="footer-heading">Телефоны</h5>
           <ul class="footer-nav-list">
-            <li class="footer-nav-list-item"><a href="tel:+38 044 55 24 18">+38 044 55 24 18</a></li>
-            <li class="footer-nav-list-item"><a href="tel:+38 044 55 24 19">+38 044 55 24 19</a></li>
-            <li class="footer-nav-list-item"><a href="tel:+38 044 55 20 20">+38 044 55 20 20</a></li>
+            <li class="footer-nav-list-item"><a href="tel:+380974608026">+38 097 460 80 26</a></li>
+            <li class="footer-nav-list-item"><a href="tel:+380506444136">+38 050 644 41 36</a></li>
           </ul>
         </div>
       </div>
@@ -637,15 +638,18 @@
 
           <h5 class="form-label">Заполните форму:</h5>
           <div class="row">
+
             <div class="col m-6">
               <div class="input-field">
-                <input type="tel" placeholder="Телефон">
+                <input type="text" id="name-1">
+                <label for="name-1" class="input-label">Ваше имя</label>
               </div>
             </div>
 
             <div class="col m-6">
               <div class="input-field">
-                <input type="email" placeholder="Email">
+                <input type="tel" id="phone-1">
+                <label for="phone-1" class="input-label">Телефон</label>
               </div>
             </div>
           </div>
@@ -653,26 +657,39 @@
           <div class="row">
             <div class="col m-6">
               <div class="input-field">
-                <select>
-                  <option value="1">Вид заведения</option>
-                  <option value="2">Ресторан</option>
-                  <option value="3">Магазин</option>
-                </select>
+                <input type="email" id="email-1">
+                <label for="email-1" class="input-label">Адрес электронной почты</label>
               </div>
             </div>
+
             <div class="col m-6">
               <div class="input-field">
-                <select>
-                  <option value="1">Package of services type</option>
-                  <option value="2">Package 1</option>
-                  <option value="3">Package 2</option>
-                </select>
+                <input type="text" id="institution-1">
+                <label for="institution-1" class="input-label">Название заведения</label>
               </div>
             </div>
           </div>
-          <div class="input-field">
-                  <textarea name=""
-                            placeholder="Ваш вопрос или дополнительная информация"></textarea>
+          <div class="row">
+            <div class="col m-6">
+              <div class="input-field">
+                <select id="institution-type-1">
+                  <option value="" disabled selected></option>
+                  <option value="1">Ресторан, кафе, бар</option>
+                  <option value="2">Киоск уличной еды, фургон</option>
+                  <option value="3">Магазин, склад</option>
+                  <option value="4">Салон красоты, СПА</option>
+                  <option value="5">Другое</option>
+                </select>
+                <label for="institution-type-1" class="input-label">Формат заведения</label>
+              </div>
+            </div>
+
+            <div class="col m-6">
+              <div class="input-field">
+                <input type="text" id="question-1">
+                <label for="question-1" class="input-label">Ваш вопрос</label>
+              </div>
+            </div>
           </div>
 
           <div class="btn-field">

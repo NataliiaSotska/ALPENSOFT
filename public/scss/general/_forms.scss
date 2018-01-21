@@ -17,9 +17,7 @@ select {
   padding: .6rem 1rem;
   border: {
     width: 0;
-    radius: .2rem;
-  }
-;
+  };
   font-weight: 400;
 }
 
@@ -46,13 +44,34 @@ label {
       style: solid;
       color: $base-border;
     };
+
+    &:focus {
+      + .input-label {
+        bottom: 3rem;
+      }
+    }
   }
 
   .input-field {
+    position: relative;
+    width: 100%;
     margin-bottom: 2.4rem;
+    text-align: left;
+
+    .input-label {
+      position: absolute;
+      bottom: .8rem;
+      color: rgba($base-text, .87);
+      opacity: .4;
+      transition: all .2s;
+      z-index: 1;
+
+      &.active {
+        bottom: 3rem;
+      }
+    }
   }
 }
-
 
 // Styles for custom select -----
 
@@ -70,44 +89,61 @@ label {
 }
 
 .selectric {
+  height: 48px;
   border: 0;
   border-bottom: .1rem solid $base-border;
-  background: $white;
+  background: transparent;
 
   .label {
-    height: 48px;
-    margin: 0 38px 0 0;
+    position: absolute;
+    bottom: .8rem;
+    margin: 0 3.8rem 0 0;
+    padding: 2rem 0 .5rem;
     color: rgba($base-text, .87);
-    line-height: 48px;
+    font-size: 1.4rem;
+    line-height: 1;
+
   }
 
   .button {
-    height: 48px;
+    top: .6rem;
+    height: 4.2rem;
     background-color: transparent;
-    line-height: 48px;
+    line-height: 4.2rem;
 
     &::after {
       content: '';
-      width: 2.4rem;
-      height: 2.4rem;
+      width: 1.8rem;
+      height: 1.8rem;
+      border: 0;
       background: {
         image: url('../img/ic_arrow-down-dark.svg');
         repeat: no-repeat;
         size: contain;
       };
-      border: 0;
     }
   }
 }
 
 .selectric-items {
+  padding: .6rem 0 1rem;
   border: 0;
-  border-radius: 0 0 .4rem .4rem;
+  border-radius: .4rem;
   background-color: rgba($white, .95);
-  box-shadow: 0 4px 4px 0 rgba($black, .08);
+  box-shadow: 0 2px 8px 0 rgba($black, .16);
+
+  ul, li {
+    min-height: auto;
+    font-size: 1.4rem;
+    line-height: 1;
+  }
 
   li {
-    padding: .8rem 1.6rem;
+    padding: .6rem 1.6rem;
+
+    &:first-child {
+      padding: 0;
+    }
   }
 
   li.selected,
@@ -115,6 +151,11 @@ label {
   li:hover {
     background: transparent;
     color: rgba($base-text, .87);
-    text-decoration: underline;
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .selectric-items {
+    background-color: rgba($white, .85);
   }
 }

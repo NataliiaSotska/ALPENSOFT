@@ -10,7 +10,7 @@
   }
 
   .second-heading {
-    margin-bottom: 1.6rem;
+    margin-bottom: .8rem;
   }
 
   .btn-field {
@@ -22,6 +22,23 @@
   .functional {
     .row {
       padding-bottom: 5.6rem;
+    }
+  }
+}
+
+@media (min-width: $medium-screen) and (max-width: $large-screen) {
+  .functional {
+    .flex-center {
+      display: block;
+      padding-top: 5.6rem;
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .functional {
+    .second-heading {
+      margin-bottom: 1.6rem;
     }
   }
 }

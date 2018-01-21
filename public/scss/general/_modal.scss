@@ -5,7 +5,7 @@
   top: 50%;
   left: 2.4rem;
   right: 2.4rem;
-  transform: translate(0, -50%);
+  transform: translateY(-50%);
   z-index: 1050;
   animation: modalFadeInDown .45s both;
 
@@ -41,12 +41,25 @@
 @keyframes modalFadeInDown {
   0% {
     opacity: 0;
-    transform: translate(-50%, -100%);
+    transform: translateY(-100%);
   }
 
   100% {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
   }
 }
 
+@media (min-width: $medium-screen) {
+  @keyframes modalFadeInDown {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

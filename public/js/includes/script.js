@@ -111,13 +111,42 @@
         // ----- Libs initialization -----
 
         var $phoneNumber = $('#phoneNumber');
+        var select = $('select');
 
         if ($phoneNumber) {
             $phoneNumber.inputmask({ "mask": "+3 (80) 9999-99999" });
         }
 
-        $(function () {
-            $('select').selectric();
+        select.selectric({
+            disableOnMobile: false,
+            nativeOnMobile: false
+        });
+
+        var $selectricWrapper = $('.selectric-wrapper');
+        var $selectricLabel = $('.label');
+
+        select.on('selectric-open selectric-select', function() {
+            $selectricWrapper.next().addClass('active');
+        });
+
+        select.on('selectric-close', function() {
+            if ($selectricLabel.text() !== '') {
+                $selectricWrapper.next().addClass('active');
+            } else {
+                $selectricWrapper.next().removeClass('active');
+            }
+        });
+
+        // ----- Check inputs -----
+
+        $('input').change(function () {
+            var $input = $(this);
+
+            if ($input.val() !== '') {
+                $input.next().addClass('active');
+            } else {
+                $input.next().removeClass('active');
+            }
         });
 
         // ----- Modal -----
