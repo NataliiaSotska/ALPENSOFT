@@ -1,6 +1,6 @@
 // General variables ----
 $default-fonts  : -apple-system, BlinkMacSystemFont; // TODO need testing of font at windows system
-$base-font-name : 'Roboto', sans-serif;
+$base-font-name : 'Roboto';
 // ----------------------
 
 // Fonts path -----------
@@ -17,7 +17,7 @@ $base-font-data : (
 
 // Fonts family variables
 $base-font-size   : 62.5%; // 10px
-$base-font-family : $default-fonts, $base-font-name;
+$base-font-family : $default-fonts, $base-font-name, sans-serif;
 
 // Typography -----------
 @function line_height($lh, $fs) { // lh - line-height, fs - font-size
