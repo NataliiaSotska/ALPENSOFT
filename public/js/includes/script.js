@@ -122,20 +122,20 @@
             nativeOnMobile: false
         });
 
-        var $selectricWrapper = $('.selectric-wrapper');
-        var $selectricLabel = $('.label');
-
-        select.on('selectric-open selectric-select', function() {
-            $selectricWrapper.next().addClass('active');
-        });
-
-        select.on('selectric-close', function() {
-            if ($selectricLabel.text() !== '') {
-                $selectricWrapper.next().addClass('active');
-            } else {
-                $selectricWrapper.next().removeClass('active');
-            }
-        });
+        // var $selectricWrapper = $('.selectric-wrapper');
+        // var $selectricLabel = $('.label');
+        //
+        // select.on('selectric-open selectric-select', function() {
+        //     $selectricWrapper.next().addClass('active');
+        // });
+        //
+        // select.on('selectric-close', function() {
+        //     if ($selectricLabel.text() !== '') {
+        //         $selectricWrapper.next().addClass('active');
+        //     } else {
+        //         $selectricWrapper.next().removeClass('active');
+        //     }
+        // });
 
         // ----- Check inputs -----
 
