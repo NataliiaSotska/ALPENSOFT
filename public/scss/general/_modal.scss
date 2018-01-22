@@ -1,5 +1,29 @@
 @import '../utilities/color';
 
+@keyframes modalFadeInDown-mobile {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes modalFadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .modal {
   position: fixed;
   top: 50%;
@@ -7,7 +31,7 @@
   right: 2.4rem;
   transform: translateY(-50%);
   z-index: 1050;
-  animation: modalFadeInDown .45s both;
+  animation: modalFadeInDown-mobile .45s both;
 
   &-backdrop {
     position: fixed;
@@ -35,31 +59,6 @@
     right: auto;
     width: 51.6rem;
     transform: translate(-50%, -50%);
-  }
-}
-
-@keyframes modalFadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-}
-
-@media (min-width: $medium-screen) {
-  @keyframes modalFadeInDown {
-    0% {
-      opacity: 0;
-      transform: translate(-50%, -100%);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translate(-50%, -50%);
-    }
+    animation: modalFadeInDown .45s both;
   }
 }
