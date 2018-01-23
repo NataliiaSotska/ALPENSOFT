@@ -89,18 +89,19 @@ label {
 }
 
 .selectric {
-  height: 48px;
+  height: 40px;
   border: 0;
   border-bottom: .1rem solid $base-border;
   background: transparent;
 
   .label {
     @extend %textOverflow;
-    position: absolute;
-    bottom: .8rem;
+    //position: absolute;
+    //bottom: .8rem;
     max-width: calc(100% - 3.8rem);
     margin: 0 3.8rem 0 0;
-    padding: 2rem 0 .5rem;
+    //padding: 2rem 0 .5rem;
+    padding: 1.8rem 0 0;
     color: rgba($base-text, .87);
     font-size: 1.4rem;
     line-height: 1;
@@ -159,4 +160,89 @@ label {
   .selectric-items {
     background-color: rgba($white, .85);
   }
+}
+
+
+// ----------
+.fscf-div-form {
+  text-align: left;
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+.fscf-div-clear {
+  flex-basis: 50%;
+  margin-bottom: 1.4rem;
+
+  &:nth-child(1),
+  &:nth-child(3) {
+    padding-right: 1.2rem;
+  }
+
+  &:nth-child(2),
+  &:nth-child(4) {
+    padding-left: 1.2rem;
+  }
+
+  &:nth-child(5) {
+    flex-basis: 100%;
+  }
+
+  &:nth-child(6),
+  &:nth-child(7) {
+    display: none;
+  }
+
+  label {
+    display: block;
+    //position: absolute;
+    //bottom: .8rem;
+    color: rgba($base-text, .87);
+    opacity: .4;
+    //transition: all .2s;
+    //z-index: 1;
+    line-height: 1;
+  }
+
+}
+
+.fscf-div-field {
+  input {
+    height: 3.6rem;
+  }
+}
+
+.fscf-div-submit {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: flex-end;
+}
+
+.fscf-button-submit {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 1.4rem 3.2rem 1.2rem;
+  border: 0 none {
+    radius: .2rem;
+  };
+  outline: none 0;
+  background: linear-gradient(180deg, $btn-gradient-1 0%, $btn-gradient-2 46.23%, $btn-gradient-1 100%);
+  color: $white;
+  font-family: $base-font-family;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: all 350ms ease-in-out 0s;
+  user-select: none;
 }

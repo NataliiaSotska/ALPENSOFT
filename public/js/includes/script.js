@@ -139,15 +139,15 @@
 
         // ----- Check inputs -----
 
-        $('input').change(function () {
-            var $input = $(this);
-
-            if ($input.val() !== '') {
-                $input.next().addClass('active');
-            } else {
-                $input.next().removeClass('active');
-            }
-        });
+        // $('input').change(function () {
+        //     var $input = $(this);
+        //
+        //     if ($input.val() !== '') {
+        //         $input.next().addClass('active');
+        //     } else {
+        //         $input.next().removeClass('active');
+        //     }
+        // });
 
         // ----- Modal -----
 
