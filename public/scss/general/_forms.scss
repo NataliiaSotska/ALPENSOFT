@@ -175,27 +175,8 @@ label {
 }
 
 .fscf-div-clear {
-  flex-basis: 50%;
+  flex-basis: 100%;
   margin-bottom: 1.4rem;
-
-  &:nth-child(1),
-  &:nth-child(3) {
-    padding-right: 1.2rem;
-  }
-
-  &:nth-child(2),
-  &:nth-child(4) {
-    padding-left: 1.2rem;
-  }
-
-  &:nth-child(5) {
-    flex-basis: 100%;
-  }
-
-  &:nth-child(6),
-  &:nth-child(7) {
-    display: none;
-  }
 
   label {
     display: block;
@@ -208,6 +189,28 @@ label {
     line-height: 1;
   }
 
+  &:nth-child(6),
+  &:nth-child(7) {
+    display: none;
+  }
+
+  @media (min-width: $medium-screen) {
+    flex-basis: 50%;
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      padding-right: 1.2rem;
+    }
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      padding-left: 1.2rem;
+    }
+
+    &:nth-child(5) {
+      flex-basis: 100%;
+    }
+  }
 }
 
 .fscf-div-field {
