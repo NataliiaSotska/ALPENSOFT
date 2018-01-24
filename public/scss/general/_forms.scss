@@ -30,6 +30,8 @@ label {
 }
 
 .cta-form {
+  min-height: 33.6rem;
+
   input[type='tel'],
   input[type='text'],
   input[type='email'],
@@ -38,7 +40,7 @@ label {
   input[type='password'],
   textarea {
     display: block;
-    padding: 1rem 0 .5rem;
+    padding: .5rem 0;
     border: {
       bottom-width: .1rem;
       style: solid;
@@ -69,6 +71,12 @@ label {
       &.active {
         bottom: 3rem;
       }
+    }
+  }
+
+  .form-label {
+    + .fscf-div-clear {
+      display: none;
     }
   }
 }
@@ -171,12 +179,17 @@ label {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+
+    + div.fscf-div-error,
+    #fscf_form_error1 {
+      display: none;
+    }
   }
 }
 
 .fscf-div-clear {
   flex-basis: 100%;
-  margin-bottom: 1.4rem;
+  margin-bottom: 2rem;
 
   label {
     display: block;
@@ -189,34 +202,60 @@ label {
     line-height: 1;
   }
 
-  &:nth-child(6),
-  &:nth-child(7) {
+  //&:nth-child(6),
+  //&:nth-child(7),
+  &#fscf_div_clear1_7,
+  &#fscf_div_clear1_8 {
     display: none;
+  }
+
+  //&:nth-child(5),
+  &#fscf_div_clear1_6 {
+    margin-bottom: 1.4rem;
   }
 
   @media (min-width: $medium-screen) {
     flex-basis: 50%;
 
-    &:nth-child(1),
-    &:nth-child(3) {
+    //&:nth-child(1),
+    //&:nth-child(3),
+    &#fscf_div_clear1_0,
+    &#fscf_div_clear1_4 {
       padding-right: 1.2rem;
     }
 
-    &:nth-child(2),
-    &:nth-child(4) {
+    //&:nth-child(2),
+    //&:nth-child(4),
+    &#fscf_div_clear1_1,
+    &#fscf_div_clear1_5 {
       padding-left: 1.2rem;
     }
 
-    &:nth-child(5) {
+    //&:nth-child(5),
+    &#fscf_div_clear1_6 {
       flex-basis: 100%;
     }
   }
 }
 
 .fscf-div-field {
+  position: relative;
+
   input {
-    height: 3.6rem;
+    height: 3rem;
   }
+
+  .fscf-div-error + input {
+    border-bottom-color: $errors;
+  }
+}
+
+.fscf-div-error {
+  position: absolute;
+  top: calc(100% + .2rem);
+  color: $errors;
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 .fscf-div-submit {
@@ -248,4 +287,26 @@ label {
   vertical-align: middle;
   transition: all 350ms ease-in-out 0s;
   user-select: none;
+}
+
+.fscf-div-form + .fscf-div-clear {
+  display: none;
+}
+
+.fscf-div-redirecting {
+  color: $base-text;
+  text-align: center;
+}
+
+#fscf_redirect_word1 {
+  display: none;
+}
+
+.fscf-div-redirecting {
+  color: $base-text;
+  text-align: center;
+}
+
+.cta-form {
+  min-height: 33.6rem;
 }
