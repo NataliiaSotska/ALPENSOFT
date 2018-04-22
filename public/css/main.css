@@ -1938,6 +1938,7 @@ label {
   display: flex;
   flex-direction: column;
   min-height: 56rem;
+  max-height: 56rem;
   max-width: 30.8rem;
   margin: 0 auto 2.4rem;
   text-align: center; }
