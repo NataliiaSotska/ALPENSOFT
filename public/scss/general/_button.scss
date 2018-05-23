@@ -21,7 +21,7 @@
   background-color: transparent;
   font-family: $base-font-family;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
   text-align: center;
   text-decoration: none;
@@ -34,11 +34,12 @@
 
   &-primary {
     padding: 1.8rem 5.2rem 1.6rem;
-    background-color: $btn-primary;
-    color: $white;
+    background-color: transparent;
+    color: $cta-row-bg;
 
     &:hover {
       background-color: lighten($btn-primary, 10%);
+      color: $white;
     }
 
     &.gradient {

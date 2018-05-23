@@ -17,7 +17,7 @@
 
   .btn {
     padding: 1.1rem 2rem .9rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -55,6 +55,19 @@
     }
   }
 }
+
+.page-activ {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: .2rem solid $cta-row-bg;
+  }
+}
+
 
 .sub-nav-list {
   &-item {
@@ -162,4 +175,10 @@
       }
     }
   }
+  .page-activ {
+    &:after {
+      left: 0.8rem;
+      right: 0.8rem;
+    }
+  } 
 }

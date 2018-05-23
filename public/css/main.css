@@ -225,6 +225,12 @@
 @font-face {
   font-family: "Roboto";
   font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/roboto/roboto-medium.woff2") format("woff2"), url("../fonts/roboto/roboto-medium.woff") format("woff"); }
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 700;
   src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto/roboto-bold.woff2") format("woff2"), url("../fonts/roboto/roboto-bold.woff") format("woff"); }
 
@@ -1417,7 +1423,7 @@ label {
   background-color: transparent;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
   text-align: center;
   text-decoration: none;
@@ -1429,10 +1435,11 @@ label {
   user-select: none; }
   .btn-primary {
     padding: 1.8rem 5.2rem 1.6rem;
-    background-color: #0069ff;
-    color: #fff; }
+    background-color: transparent;
+    color: #0069ff; }
     .btn-primary:hover {
-      background-color: #3387ff; }
+      background-color: #3387ff;
+      color: #fff; }
     .btn-primary.gradient {
       background: linear-gradient(180deg, #3490fe 0%, #0060e9 46.23%, #3490fe 100%); }
   .btn-bordered {
@@ -1540,7 +1547,7 @@ label {
     height: 100%; }
   .main-header .btn {
     padding: 1.1rem 2rem .9rem;
-    font-size: 1.2rem; }
+    font-size: 1.4rem; }
 
 .nav-wrap {
   position: fixed;
@@ -1568,6 +1575,16 @@ label {
   font-weight: 500; }
   .nav-list .main-item .icon-down {
     display: none; }
+
+.page-activ {
+  position: relative; }
+  .page-activ:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 0.2rem solid #0069ff; }
 
 .sub-nav-list-item {
   padding: .4rem 0; }
@@ -1633,7 +1650,10 @@ label {
         padding-top: 0;
         font-size: 1.4rem;
         line-height: 2.4rem;
-        white-space: nowrap; } }
+        white-space: nowrap; }
+  .page-activ:after {
+    left: 0.8rem;
+    right: 0.8rem; } }
 
 .section {
   position: relative;
@@ -1758,7 +1778,7 @@ label {
   height: 33.2rem;
   margin-top: 5.6rem;
   padding: 1.8rem 0 1.6rem;
-  background-image: url("../img/first-screen-bg.jpeg");
+  background-image: url("../img/first-screen-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -1788,6 +1808,16 @@ label {
 @media (min-width: 1200px) {
   .first-screen .main-heading {
     padding: 0 16rem; } }
+
+.first-screen-eq {
+  height: 100vh;
+  margin-top: 0;
+  background-image: url("../img/first-screen-bg-eq.jpg");
+  color: #fff; }
+
+@media (min-width: 1024px) {
+  .first-screen-eq {
+    background-image: url("../img/first-screen-bg-eq.jpg"); } }
 
 .about {
   padding-bottom: 1.6rem;
