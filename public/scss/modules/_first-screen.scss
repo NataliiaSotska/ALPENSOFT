@@ -1,7 +1,7 @@
 .first-screen {
-  height: 33.2rem;
-  margin-top: $header-height;
-  padding: 1.8rem 0 1.6rem;
+  height: 48rem;
+  margin-top: 0;
+  padding: 1.8rem 0 0;
   background: {
     image: url('../img/first-screen-bg.jpg');
     repeat: no-repeat;
@@ -10,36 +10,47 @@
   };
 
   .main-heading {
-    margin: 0;
+    margin: 0 0 4rem;
     color: $main-heading;
     font-weight: 600;
     text-align: center;
+  }
+
+  img {
+    width: 95%;
   }
 
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     height: 100%;
   }
 }
 
 @media (min-width: $medium-screen) {
   .first-screen {
-    height: calc(100vh - #{$header-height});
+    height: 64rem;
+    img {
+      width: 85.4%;
+    }
   }
 }
 
 @media (min-width: $large-screen) {
   .first-screen {
-    padding: 6.4rem 0 1.6rem;
+    padding: 6.4rem 0 0;
     background: {
       image: url('../img/first-screen-bg.jpg');
     };
 
     .main-heading {
       padding: 0 9rem;
+      font-weight: 500;
+    }
+    img {
+      width: 83%;
     }
   }
 }
@@ -47,7 +58,8 @@
 @media (min-width: $xlarge-screen) {
   .first-screen {
     .main-heading {
-      padding: 0 16rem;
+      padding: 0;
+      width: 83%;
     }
   }
 }

@@ -57,17 +57,10 @@
 }
 
 .page-activ {
-  position: relative;
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  .main-item {
     border-bottom: .2rem solid $cta-row-bg;
   }
 }
-
 
 .sub-nav-list {
   &-item {
@@ -175,10 +168,16 @@
       }
     }
   }
+
   .page-activ {
+    position: relative;
     &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
       left: 0.8rem;
       right: 0.8rem;
+      border-bottom: .2rem solid $cta-row-bg;
     }
-  } 
+  }
 }

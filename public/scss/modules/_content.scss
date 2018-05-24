@@ -8,6 +8,7 @@
     position: relative;
     margin: 0 0 3.2rem;
     color: rgba($base-text, .87);
+    font-weight: bold;
     text-align: center;
 
     &::after {
@@ -16,8 +17,9 @@
       top: calc(100% + 1.6rem);
       left: 50%;
       width: 12rem;
-      height: .1rem;
-      background-color: rgba($base-text, .87);
+      height: .2rem;
+      border-radius: .1rem;
+      background-color: $btn-primary;
       transform: translate(-50%, 0);
     }
   }
@@ -25,7 +27,7 @@
   .second-heading {
     margin: 0;
     color: rgba($base-text, .87);
-    font-weight: 400;
+    font-weight: 600;
   }
 
   .arrow-down {
@@ -62,6 +64,9 @@
 
     .section-heading {
       margin: 0 0 5rem;
+    }
+    .second-heading {
+      font-weight: 500;
     }
   }
 }

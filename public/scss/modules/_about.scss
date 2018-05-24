@@ -10,6 +10,8 @@
 
   .section-heading {
     color: rgba($white, .87);
+    font-size: 1.4rem;
+    line-height: 2rem;
 
     &::after {
       display: none;
@@ -38,7 +40,10 @@
 
 @media (min-width: $medium-screen) {
   .about {
-
+    .section-heading {
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+    }
     @media (max-width: $large-screen) {
       .container {
         padding-right: 8.8rem;
