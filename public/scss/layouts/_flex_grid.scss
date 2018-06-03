@@ -81,10 +81,6 @@
         flex-basis: $width;
         max-width: $width;
       }
-      
-      .#{$letter}-offset-#{$i} {
-        margin-left: $width;
-      }
     }
     
     @each $j in (start, end) {

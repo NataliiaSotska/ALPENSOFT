@@ -30,6 +30,10 @@ h6 {
   };
 }
 
+h4 {
+  font-weight: 600;
+}
+
 
 h1 {
   @include default-font-size($size-h1);

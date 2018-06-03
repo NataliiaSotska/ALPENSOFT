@@ -1,0 +1,36 @@
+.write-to-us {
+	height: 32rem;
+	background: {
+		image: url('../img/bg-write-to-us2.png');
+    repeat: no-repeat;
+    size: cover;
+    position: center center;
+	}
+	text-align: center;
+
+	.second-heading {
+		padding: 2.4rem 0 4rem;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+
+		span {
+			display: block;
+		}
+	}
+
+	img {
+		margin-right: 1.2rem;
+	}
+}
+
+@media (min-width: $medium-screen) {
+	.write-to-us {
+		.second-heading {
+			font-size: 2.4rem;
+
+			span {
+				display: inline;
+			}
+		}
+	}
+}
