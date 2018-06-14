@@ -11,32 +11,29 @@
 }
 
 .btn {
-  position: relative;
   display: inline-block;
-  margin: 0;
-  padding: 1.8rem 2.6rem 1.6rem;
+  width: 100%;
   border: 0 none {
     radius: .2rem;
   };
   outline: none 0;
-  background-color: transparent;
   font-family: $base-font-family;
-  font-size: 1.4rem;
-  font-weight: 600;
   line-height: 1;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
   cursor: pointer;
-  vertical-align: middle;
   transition: all 350ms ease-in-out 0s;
   user-select: none;
 
   &-primary {
-    padding: 1.8rem 5.2rem 1.6rem;
+    height: 4.8rem;
+    line-height: 4.8rem;
+    margin-top: 0.8rem;
     background-color: $btn-primary;
     color: $white;
+    font-weight: 600;
 
     &:hover {
       background-color: lighten($btn-primary, 10%);
@@ -74,9 +71,12 @@
     }
   }
 
+  &-transparent {
+    background-color: transparent;
+  }
+
   &-banded {
-    width: 30.8rem;
-    height: 4.8rem;
+    width: 100%;
     padding: 0;
     margin-bottom: 1.6rem;
     border: {
@@ -112,6 +112,7 @@
 
   &-text {
     padding: 0;
+    background-color: transparent;
     color: $btn-primary;
     line-height: 2.8rem;
 

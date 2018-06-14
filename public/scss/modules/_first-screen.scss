@@ -1,65 +1,150 @@
-.first-screen {
-  height: 48rem;
-  margin-top: 0;
-  padding: 1.8rem 0 0;
+@import '../utilities/placeholder';
+
+.first-screen-home {
+  @extend %first-screen;
+  height: 67rem;
   background: {
-    image: url('../img/first-screen-bg.jpg');
-    repeat: no-repeat;
-    position: center center;
-    size: cover;
+    image: url(../img/mockups.jpg), url('../img/first-screen-bg.jpg');
+    position: center bottom, center center;
+    size: 85% auto, cover;
   };
 
   .main-heading {
-    margin: 0 0 4rem;
+    @extend %main-heading;
+    margin-top: 7.8rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.5px;
     color: $main-heading;
-    font-weight: 600;
-    text-align: center;
   }
 
-  img {
-    width: 95%;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100%;
-  }
-}
-
-@media (min-width: $medium-screen) {
-  .first-screen {
+  @media (min-width: $medium-screen) {
     height: 64rem;
-    img {
-      width: 85.4%;
-    }
-  }
-}
-
-@media (min-width: $large-screen) {
-  .first-screen {
-    padding: 6.4rem 0 0;
     background: {
-      image: url('../img/first-screen-bg.jpg');
+      image: url(../img/mockups.png), url('../img/first-screen-bg.jpg');
+      position: 110% 85%, center center;
+      size: 60%, cover;
     };
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.64);
 
     .main-heading {
-      padding: 0 9rem;
-      font-weight: 500;
+      width: 41.5%;
+      margin-top: 14.2rem;
+      font-size: 2rem;
+      line-height: 2.8rem;
+      letter-spacing: normal;
+
+      span {
+        display: none;
+      }
     }
-    img {
-      width: 83%;
+
+    p {
+      width: 41.5%;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      letter-spacing: -0.3px;
+    }
+
+    .btn-primary {
+      width: 21.4rem; 
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (min-width: $large-screen) {
+    height: 72rem;
+    background-position: 100% 85%, center center;
+    background-size: 55%, cover;
+
+    .main-heading {
+      margin-top: 19.4rem;
+      margin-bottom: 2.4rem;
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+    }
+
+    p {
+      width: 43%;
+      font-size: 1.8rem;
+      line-height: 3.2rem;
+      letter-spacing: normal;
+    }
+
+    .btn-primary {
+      margin-top: 3.2rem;
+      height: 5.6rem;
+      width: 28.6rem;
+      font-size: 1.6rem;
+      line-height: 5.6rem;
     }
   }
 }
 
-@media (min-width: $xlarge-screen) {
-  .first-screen {
+.first-screen-equipment {
+  @extend %first-screen;
+  height: 57.8rem;
+  background: {
+    image: url('../img/first-screen-bg-eq.jpg'), linear-gradient(to top left, #00cac2, #00a4d7);
+    position: center bottom;
+    size: 37% auto, cover;
+  };
+
+  .main-heading {
+    @extend %main-heading;
+    margin-top: 7rem;
+    font-size: 2rem;
+    line-height: 3.2rem;
+  }
+
+  .btn-banded {
+    margin-top: 1.6rem;
+    border: 1px solid #FFFFFF;
+    background-color: rgba(255,255,255,0.16);
+    box-shadow: 0 4px 8px 0 rgba(38,135,251,0.32), 0 7px 17px 0 rgba(0,0,0,0.2);
+    color: $white;
+  }
+
+  @media (min-width: $small-screen) {
+    background-size: 28% auto, cover;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .24);
+
+    .container {
+      padding-right: 7.7rem;
+      padding-left: 7.7rem;
+    }
+  }
+
+  @media (min-width: $medium-screen) {
+    height: 94.4rem;
+    background-size: 43% auto, cover;
+    
     .main-heading {
-      padding: 0;
-      width: 83%;
+      margin-top: 13.4rem;
+      font-size: 3.2rem;
+    }
+
+    p {
+      font-size: 2rem;
+      line-height: 3.2rem;
+    }
+  }
+  @media (min-width: $large-screen) {
+    height: 64rem;
+    background-size: auto, cover;
+    background-position: 80% 65%;
+
+    .container {
+      padding-right: 1.2rem;
+      padding-left: 1.2rem;
+    }
+
+    .main-heading {
+      margin: 20.2rem 0 2rem;
+    }
+    
+    p {
+      width: 55.3rem;
     }
   }
 }

@@ -414,6 +414,16 @@ body {
   align-items: center;
   justify-content: center; }
 
+.first-screen-home, .first-screen-equipment {
+  margin-top: 0;
+  padding: 1.8rem 0 0;
+  background-repeat: no-repeat;
+  color: #fff; }
+
+.first-screen-home .main-heading, .first-screen-equipment .main-heading {
+  margin-bottom: 1.6rem;
+  font-weight: 600; }
+
 * {
   box-sizing: border-box; }
   *::before, *::after {
@@ -653,6 +663,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.first-screen-home, .first-screen-equipment {
+  margin-top: 0;
+  padding: 1.8rem 0 0;
+  background-repeat: no-repeat;
+  color: #fff; }
+
+.first-screen-home .main-heading, .first-screen-equipment .main-heading {
+  margin-bottom: 1.6rem;
+  font-weight: 600; }
 
 @media (min-width: 544px) {
   .container {
@@ -1320,30 +1340,27 @@ label {
   cursor: pointer; }
 
 .btn {
-  position: relative;
   display: inline-block;
-  margin: 0;
-  padding: 1.8rem 2.6rem 1.6rem;
+  width: 100%;
   border: 0 none;
     border-radius: .2rem;
   outline: none 0;
-  background-color: transparent;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
   line-height: 1;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
   cursor: pointer;
-  vertical-align: middle;
   transition: all 350ms ease-in-out 0s;
   user-select: none; }
   .btn-primary {
-    padding: 1.8rem 5.2rem 1.6rem;
+    height: 4.8rem;
+    line-height: 4.8rem;
+    margin-top: 0.8rem;
     background-color: #0069ff;
-    color: #fff; }
+    color: #fff;
+    font-weight: 600; }
     .btn-primary:hover {
       background-color: #3387ff; }
     .btn-primary.gradient {
@@ -1366,9 +1383,10 @@ label {
           border-color: #0069ff;
           background-color: #0069ff;
           color: #fff; } }
+  .btn-transparent {
+    background-color: transparent; }
   .btn-banded {
-    width: 30.8rem;
-    height: 4.8rem;
+    width: 100%;
     padding: 0;
     margin-bottom: 1.6rem;
     border-width: .1rem;
@@ -1391,6 +1409,7 @@ label {
           margin-right: 2rem; } }
   .btn-text {
     padding: 0;
+    background-color: transparent;
     color: #0069ff;
     line-height: 2.8rem; }
     .btn-text:hover {
@@ -1706,58 +1725,145 @@ label {
       transform: translate3d(0, 1rem, 0) rotate(-45deg);
       transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-.first-screen {
-  height: 48rem;
+.container, .container-full {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.2rem;
+  padding-left: 1.2rem; }
+
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+.clearfix::before, .clearfix::after {
+  content: ' ';
+  display: table; }
+
+.clearfix::after {
+  clear: both; }
+
+.selectric .label {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.section .flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.first-screen-home, .first-screen-equipment {
   margin-top: 0;
   padding: 1.8rem 0 0;
-  background-image: url("../img/first-screen-bg.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; }
-  .first-screen .main-heading {
-    margin: 0 0 4rem;
-    color: rgba(255, 255, 255, 0.87);
-    font-weight: 600;
-    text-align: center; }
-  .first-screen img {
-    width: 95%; }
-  .first-screen .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100%; }
+  color: #fff; }
 
-@media (min-width: 768px) {
-  .first-screen {
-    height: 64rem; }
-    .first-screen img {
-      width: 85.4%; } }
+.first-screen-home .main-heading, .first-screen-equipment .main-heading {
+  margin-bottom: 1.6rem;
+  font-weight: 600; }
 
-@media (min-width: 1024px) {
-  .first-screen {
-    padding: 6.4rem 0 0;
-    background-image: url("../img/first-screen-bg.jpg"); }
-    .first-screen .main-heading {
-      padding: 0 9rem;
-      font-weight: 500; }
-    .first-screen img {
-      width: 83%; } }
+.first-screen-home {
+  height: 67rem;
+  background-image: url(../img/mockups.jpg), url("../img/first-screen-bg.jpg");
+  background-position: center bottom, center center;
+  background-size: 85% auto, cover; }
+  .first-screen-home .main-heading {
+    margin-top: 7.8rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.5px;
+    color: rgba(255, 255, 255, 0.87); }
+  @media (min-width: 768px) {
+    .first-screen-home {
+      height: 64rem;
+      background-image: url(../img/mockups.png), url("../img/first-screen-bg.jpg");
+      background-position: 110% 85%, center center;
+      background-size: 60%, cover;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.64); }
+      .first-screen-home .main-heading {
+        width: 41.5%;
+        margin-top: 14.2rem;
+        font-size: 2rem;
+        line-height: 2.8rem;
+        letter-spacing: normal; }
+        .first-screen-home .main-heading span {
+          display: none; }
+      .first-screen-home p {
+        width: 41.5%;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        letter-spacing: -0.3px; }
+      .first-screen-home .btn-primary {
+        width: 21.4rem;
+        font-size: 1.2rem; } }
+  @media (min-width: 1024px) {
+    .first-screen-home {
+      height: 72rem;
+      background-position: 100% 85%, center center;
+      background-size: 55%, cover; }
+      .first-screen-home .main-heading {
+        margin-top: 19.4rem;
+        margin-bottom: 2.4rem;
+        font-size: 2.4rem;
+        line-height: 3.2rem; }
+      .first-screen-home p {
+        width: 43%;
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+        letter-spacing: normal; }
+      .first-screen-home .btn-primary {
+        margin-top: 3.2rem;
+        height: 5.6rem;
+        width: 28.6rem;
+        font-size: 1.6rem;
+        line-height: 5.6rem; } }
 
-@media (min-width: 1200px) {
-  .first-screen .main-heading {
-    padding: 0;
-    width: 83%; } }
-
-.first-screen-eq {
-  height: 100vh;
-  margin-top: 0;
-  background-image: url("../img/first-screen-bg-eq.jpg");
-  color: rgba(255, 255, 255, 0.87); }
-
-@media (min-width: 1024px) {
-  .first-screen-eq {
-    background-image: url("../img/first-screen-bg-eq.jpg"); } }
+.first-screen-equipment {
+  height: 57.8rem;
+  background-image: url("../img/first-screen-bg-eq.jpg"), linear-gradient(to top left, #00cac2, #00a4d7);
+  background-position: center bottom;
+  background-size: 37% auto, cover; }
+  .first-screen-equipment .main-heading {
+    margin-top: 7rem;
+    font-size: 2rem;
+    line-height: 3.2rem; }
+  .first-screen-equipment .btn-banded {
+    margin-top: 1.6rem;
+    border: 1px solid #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 4px 8px 0 rgba(38, 135, 251, 0.32), 0 7px 17px 0 rgba(0, 0, 0, 0.2);
+    color: #fff; }
+  @media (min-width: 544px) {
+    .first-screen-equipment {
+      background-size: 28% auto, cover;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.24); }
+      .first-screen-equipment .container {
+        padding-right: 7.7rem;
+        padding-left: 7.7rem; } }
+  @media (min-width: 768px) {
+    .first-screen-equipment {
+      height: 94.4rem;
+      background-size: 43% auto, cover; }
+      .first-screen-equipment .main-heading {
+        margin-top: 13.4rem;
+        font-size: 3.2rem; }
+      .first-screen-equipment p {
+        font-size: 2rem;
+        line-height: 3.2rem; } }
+  @media (min-width: 1024px) {
+    .first-screen-equipment {
+      height: 64rem;
+      background-size: auto, cover;
+      background-position: 80% 65%; }
+      .first-screen-equipment .container {
+        padding-right: 1.2rem;
+        padding-left: 1.2rem; }
+      .first-screen-equipment .main-heading {
+        margin: 20.2rem 0 2rem; }
+      .first-screen-equipment p {
+        width: 55.3rem; } }
 
 .about {
   padding-bottom: 1.6rem;
@@ -2069,7 +2175,7 @@ label {
 
 .write-to-us {
   height: 32rem;
-  background-image: url("../img/bg-write-to-us2.png");
+  background-image: url("../img/bg-write-to-us.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -2088,6 +2194,9 @@ label {
     font-size: 2.4rem; }
     .write-to-us .second-heading span {
       display: inline; } }
+
+.sets-equipment .section-heading {
+  line-height: 2.8rem; }
 
 .hide {
   display: none !important; }

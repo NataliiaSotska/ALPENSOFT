@@ -38,3 +38,15 @@
   align-items: center;
   justify-content: center;
 }
+
+%first-screen {
+  margin-top: 0;
+  padding: 1.8rem 0 0;
+  background-repeat: no-repeat;
+  color: $white;
+}
+
+%main-heading {
+  margin-bottom: 1.6rem;
+  font-weight: 600;
+}
