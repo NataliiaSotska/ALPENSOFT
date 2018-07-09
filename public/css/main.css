@@ -414,16 +414,6 @@ body {
   align-items: center;
   justify-content: center; }
 
-.first-screen-home, .first-screen-equipment {
-  margin-top: 0;
-  padding: 1.8rem 0 0;
-  background-repeat: no-repeat;
-  color: #fff; }
-
-.first-screen-home .main-heading, .first-screen-equipment .main-heading {
-  margin-bottom: 1.6rem;
-  font-weight: 600; }
-
 * {
   box-sizing: border-box; }
   *::before, *::after {
@@ -519,7 +509,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  line-height: 1.6;
+  line-height: 1.4;
   margin-top: 1.5em;
   margin-bottom: 0.5em; }
   @media (min-width: 768px) {
@@ -663,16 +653,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
-
-.first-screen-home, .first-screen-equipment {
-  margin-top: 0;
-  padding: 1.8rem 0 0;
-  background-repeat: no-repeat;
-  color: #fff; }
-
-.first-screen-home .main-heading, .first-screen-equipment .main-heading {
-  margin-bottom: 1.6rem;
-  font-weight: 600; }
 
 @media (min-width: 544px) {
   .container {
@@ -1356,13 +1336,20 @@ label {
   user-select: none; }
   .btn-primary {
     height: 4.8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
     line-height: 4.8rem;
-    margin-top: 0.8rem;
     background-color: #0069ff;
-    color: #fff;
-    font-weight: 600; }
+    color: #fff; }
     .btn-primary:hover {
       background-color: #3387ff; }
+    @media (min-width: 1024px) {
+      .btn-primary {
+        background-color: transparent;
+        color: #0069ff; }
+        .btn-primary:hover {
+          font-size: 1.5rem;
+          background-color: transparent; } }
     .btn-primary.gradient {
       background: linear-gradient(180deg, #3490fe 0%, #0060e9 46.23%, #3490fe 100%); }
   .btn-bordered {
@@ -1494,8 +1481,7 @@ label {
     justify-content: space-between;
     height: 100%; }
   .main-header .btn {
-    padding: 1.1rem 2rem .9rem;
-    font-size: 1.4rem; }
+    width: 21rem; }
 
 .nav-wrap {
   position: fixed;
@@ -1609,20 +1595,23 @@ label {
   z-index: 2; }
   .section .section-heading {
     position: relative;
-    margin: 0 0 3.2rem;
+    margin: 0 0 4.6rem;
     color: rgba(20, 22, 34, 0.87);
     font-weight: bold;
     text-align: center; }
     .section .section-heading::after {
       position: absolute;
       content: '';
-      top: calc(100% + 1.6rem);
+      bottom: -1.2rem;
       left: 50%;
       width: 12rem;
       height: .2rem;
       border-radius: .1rem;
       background-color: #0069ff;
       transform: translate(-50%, 0); }
+      @media (min-width: 768px) {
+        .section .section-heading::after {
+          bottom: -1.6rem; } }
   .section .second-heading {
     margin: 0;
     color: rgba(20, 22, 34, 0.87);
@@ -1641,6 +1630,9 @@ label {
     font-weight: 500; }
   .section .col-inner {
     width: 100%; }
+
+.main-equipment .section {
+  background-color: #fff; }
 
 @media (min-width: 768px) {
   .section {
@@ -1725,35 +1717,6 @@ label {
       transform: translate3d(0, 1rem, 0) rotate(-45deg);
       transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-.container, .container-full {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1.2rem;
-  padding-left: 1.2rem; }
-
-html,
-body {
-  margin: 0;
-  padding: 0; }
-
-.clearfix::before, .clearfix::after {
-  content: ' ';
-  display: table; }
-
-.clearfix::after {
-  clear: both; }
-
-.selectric .label {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden; }
-
-.section .flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
 .first-screen-home, .first-screen-equipment {
   margin-top: 0;
   padding: 1.8rem 0 0;
@@ -1822,9 +1785,9 @@ body {
 
 .first-screen-equipment {
   height: 57.8rem;
-  background-image: url("../img/first-screen-bg-eq.jpg"), linear-gradient(to top left, #00cac2, #00a4d7);
+  background-image: url("../img/first-screen-bg-eq.png"), linear-gradient(to top left, #00cac2, #00a4d7);
   background-position: center bottom;
-  background-size: 37% auto, cover; }
+  background-size: 60% auto, cover; }
   .first-screen-equipment .main-heading {
     margin-top: 7rem;
     font-size: 2rem;
@@ -1837,7 +1800,7 @@ body {
     color: #fff; }
   @media (min-width: 544px) {
     .first-screen-equipment {
-      background-size: 28% auto, cover;
+      background-size: 45% auto, cover;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.24); }
       .first-screen-equipment .container {
         padding-right: 7.7rem;
@@ -1845,7 +1808,7 @@ body {
   @media (min-width: 768px) {
     .first-screen-equipment {
       height: 94.4rem;
-      background-size: 43% auto, cover; }
+      background-size: 75% auto, cover; }
       .first-screen-equipment .main-heading {
         margin-top: 13.4rem;
         font-size: 3.2rem; }
@@ -1856,7 +1819,7 @@ body {
     .first-screen-equipment {
       height: 64rem;
       background-size: auto, cover;
-      background-position: 80% 65%; }
+      background-position: 100% bottom; }
       .first-screen-equipment .container {
         padding-right: 1.2rem;
         padding-left: 1.2rem; }
@@ -2195,8 +2158,128 @@ body {
     .write-to-us .second-heading span {
       display: inline; } }
 
-.sets-equipment .section-heading {
-  line-height: 2.8rem; }
+.main-equipment p {
+  margin-top: .8rem;
+  margin-bottom: 1.6rem;
+  letter-spacing: -0.6px;
+  color: rgba(20, 22, 34, 0.64); }
+
+.main-equipment .subtitle,
+.main-equipment .saving {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 2.4rem;
+  opacity: .8;
+  color: #EB0080; }
+
+.set-order {
+  display: flex;
+  justify-content: space-between; }
+  .set-order .set-price {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 3.2rem;
+    opacity: .8; }
+  .set-order .btn-primary {
+    height: 3.2rem;
+    width: 13.8rem;
+    margin: 0;
+    line-height: 3.2rem; }
+
+@media (min-width: 768px) {
+  .sets-equipment .section-heading {
+    margin-bottom: 5.8rem; } }
+
+@media (min-width: 1024px) {
+  .sets-equipment .section-heading {
+    margin-bottom: 7.4rem; } }
+
+.set-equipment {
+  margin-bottom: 2.4rem;
+  padding: 1.6rem 0 2.4rem;
+  border-radius: 4px;
+  background-color: #F3F9FF;
+  box-shadow: 0 2px 8px rgba(20, 22, 34, 0.08), 0 0 1px rgba(20, 22, 34, 0.4); }
+  .set-equipment .image {
+    height: 20rem;
+    width: 100%;
+    margin-bottom: .8rem;
+    text-align: center; }
+  .set-equipment .set-description,
+  .set-equipment .set-order {
+    margin: 0 1.6rem;
+    text-align: left; }
+  .set-equipment .card-name {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4rem; }
+  @media (min-width: 544px) {
+    .set-equipment {
+      margin-right: 2.8rem;
+      margin-left: 2.8rem;
+      padding-left: 4rem;
+      padding-right: 4rem; }
+      .set-equipment .set-description,
+      .set-equipment .set-order {
+        margin: 0; }
+      .set-equipment .set-order .btn-primary {
+        width: 18rem;
+        height: 4rem;
+        letter-spacing: 0.6px; } }
+  @media (min-width: 768px) {
+    .set-equipment {
+      margin-right: 3.2rem;
+      margin-left: 3.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .set-equipment .image {
+        margin-bottom: 1.6rem; }
+      .set-equipment .set-description {
+        width: 34rem; }
+      .set-equipment .set-order {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-align: right; }
+        .set-equipment .set-order .set-price {
+          font-size: 1.8rem;
+          font-weight: 400;
+          line-height: 2.4rem;
+          letter-spacing: -0.4px; }
+      .set-equipment p {
+        margin-bottom: 0;
+        letter-spacing: -0.1px;
+        line-height: 2.4rem; } }
+  @media (min-width: 1024px) {
+    .set-equipment {
+      margin-right: 0;
+      margin-left: 0;
+      padding-right: 2.4rem;
+      padding-left: 2.4rem;
+      height: 99%; }
+      .set-equipment .card-name {
+        font-size: 1.8rem; }
+      .set-equipment .set-order .price-block {
+        margin-right: 0.6rem; }
+      .set-equipment .set-order .btn-primary {
+        width: 9rem; } }
+
+.equipment-item {
+  padding-top: 1.6rem;
+  padding-bottom: 3.2rem; }
+  .equipment-item .image {
+    text-align: center; }
+  .equipment-item .card-name {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px; }
 
 .hide {
   display: none !important; }

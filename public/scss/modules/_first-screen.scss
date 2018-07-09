@@ -1,4 +1,14 @@
-@import '../utilities/placeholder';
+%first-screen {
+  margin-top: 0;
+  padding: 1.8rem 0 0;
+  background-repeat: no-repeat;
+  color: $white;
+}
+
+%main-heading {
+  margin-bottom: 1.6rem;
+  font-weight: 600;
+}
 
 .first-screen-home {
   @extend %first-screen;
@@ -85,9 +95,9 @@
   @extend %first-screen;
   height: 57.8rem;
   background: {
-    image: url('../img/first-screen-bg-eq.jpg'), linear-gradient(to top left, #00cac2, #00a4d7);
+    image: url('../img/first-screen-bg-eq.png'), linear-gradient(to top left, #00cac2, #00a4d7);
     position: center bottom;
-    size: 37% auto, cover;
+    size: 60% auto, cover;
   };
 
   .main-heading {
@@ -106,7 +116,7 @@
   }
 
   @media (min-width: $small-screen) {
-    background-size: 28% auto, cover;
+    background-size: 45% auto, cover;
     text-shadow: 0 1px 4px rgba(0, 0, 0, .24);
 
     .container {
@@ -117,7 +127,7 @@
 
   @media (min-width: $medium-screen) {
     height: 94.4rem;
-    background-size: 43% auto, cover;
+    background-size: 75% auto, cover;
     
     .main-heading {
       margin-top: 13.4rem;
@@ -132,7 +142,7 @@
   @media (min-width: $large-screen) {
     height: 64rem;
     background-size: auto, cover;
-    background-position: 80% 65%;
+    background-position: 100% bottom;
 
     .container {
       padding-right: 1.2rem;
