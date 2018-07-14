@@ -28,6 +28,14 @@
     color: $main-heading;
   }
 
+  p {
+    opacity: 0.8;
+  }
+
+  .btn-primary {
+    font-size: 1.2rem;
+  }
+
   @media (min-width: $medium-screen) {
     height: 64rem;
     background: {
@@ -93,11 +101,8 @@
 
 .first-screen-equipment {
   @extend %first-screen;
-  height: 57.8rem;
   background: {
-    image: url('../img/first-screen-bg-eq.png'), linear-gradient(to top left, #00cac2, #00a4d7);
-    position: center bottom;
-    size: 60% auto, cover;
+    image: linear-gradient(to top left, #00cac2, #00a4d7);
   };
 
   .main-heading {
@@ -105,55 +110,97 @@
     margin-top: 7rem;
     font-size: 2rem;
     line-height: 3.2rem;
+    text-transform: uppercase;
   }
 
-  .btn-banded {
-    margin-top: 1.6rem;
-    border: 1px solid #FFFFFF;
-    background-color: rgba(255,255,255,0.16);
-    box-shadow: 0 4px 8px 0 rgba(38,135,251,0.32), 0 7px 17px 0 rgba(0,0,0,0.2);
+  .main-description {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 20px;
     color: $white;
   }
 
-  @media (min-width: $small-screen) {
-    background-size: 45% auto, cover;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, .24);
+  .btn-banded {
+    margin-top: 0;
+    margin-bottom: 3.8rem;
+    border: 1px solid $white;
+    background-color: rgba(255,255,255,0.24);
+    box-shadow: 0 4px 8px 0 rgba(38,135,251,0.32), 0 7px 17px 0 rgba(0,0,0,0.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $white;
+  }
 
-    .container {
-      padding-right: 7.7rem;
-      padding-left: 7.7rem;
-    }
+  .first-screen-image img {
+    position: relative;
+    left: -20%;
+  }
+
+  @media (min-width: $small-screen) {
+
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .24);
   }
 
   @media (min-width: $medium-screen) {
-    height: 94.4rem;
-    background-size: 75% auto, cover;
     
     .main-heading {
       margin-top: 13.4rem;
       font-size: 3.2rem;
+      line-height: 3.8rem;
     }
 
-    p {
+    .main-description {
       font-size: 2rem;
+      font-weight: 400;
       line-height: 3.2rem;
+      letter-spacing: -0.1px;
+    }
+
+    .btn-banded {
+      margin-top: 4.5rem;
+      margin-bottom: 4.5rem;
+      width: 21rem;
     }
   }
   @media (min-width: $large-screen) {
-    height: 64rem;
-    background-size: auto, cover;
-    background-position: 100% bottom;
+
+    .first-screen-image {
+      display: none;
+    }
 
     .container {
+      padding-top: 2.4rem;
       padding-right: 1.2rem;
       padding-left: 1.2rem;
+      box-sizing: border-box;
+      background-image: url(../img/terminal.png);
+      background-repeat: no-repeat;
+      background-position: right bottom;
     }
 
     .main-heading {
-      margin: 20.2rem 0 2rem;
+      margin: 18.8rem 0 2rem;
     }
     
-    p {
+    .main-description {
+      width: 50rem;
+    }
+
+    .btn-banded {
+      margin-top: 0;
+      margin-bottom: 13.8rem;
+    }
+  }
+
+  @media (min-width: $xlarge-screen) {
+    .container.narrow-content {
+      max-width: 105.6rem;
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .main-description {
       width: 55.3rem;
     }
   }
