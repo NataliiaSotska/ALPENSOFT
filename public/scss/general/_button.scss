@@ -47,6 +47,15 @@
         background-color: $btn-primary;
         color: $white;
       }
+
+      &-color {
+        background-color: $btn-primary;
+        color: $white;
+
+        &:hover {
+          background-color: lighten($btn-primary, 10%);
+        }
+      }
     }
 
     &.gradient {

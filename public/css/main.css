@@ -1349,7 +1349,12 @@ label {
         color: #0069ff; }
         .btn-primary:hover {
           background-color: #0069ff;
-          color: #fff; } }
+          color: #fff; }
+        .btn-primary-color {
+          background-color: #0069ff;
+          color: #fff; }
+          .btn-primary-color:hover {
+            background-color: #3387ff; } }
     .btn-primary.gradient {
       background: linear-gradient(180deg, #3490fe 0%, #0060e9 46.23%, #3490fe 100%); }
   .btn-bordered {
@@ -1734,10 +1739,9 @@ label {
   font-weight: 600; }
 
 .first-screen-home {
-  height: 67rem;
-  background-image: url(../img/mockups.jpg), url("../img/first-screen-bg.jpg");
-  background-position: center bottom, center center;
-  background-size: 85% auto, cover; }
+  background-image: url("../img/first-screen-bg.jpg");
+  background-position: center center;
+  background-size: cover; }
   .first-screen-home .main-heading {
     margin-top: 7.8rem;
     font-size: 1.8rem;
@@ -1748,13 +1752,12 @@ label {
     opacity: 0.8; }
   .first-screen-home .btn-primary {
     margin-top: 0.8rem;
+    margin-bottom: 4rem;
     font-size: 1.2rem; }
   @media (min-width: 768px) {
     .first-screen-home {
       height: 64rem;
-      background-image: url(../img/mockups.png), url("../img/first-screen-bg.jpg");
-      background-position: 110% 85%, center center;
-      background-size: 60%, cover;
+      background-image: url(../img/bg.png);
       text-shadow: 0 4px 16px rgba(0, 0, 0, 0.64); }
       .first-screen-home .main-heading {
         width: 41.5%;
@@ -1771,12 +1774,14 @@ label {
         letter-spacing: -0.3px; }
       .first-screen-home .btn-primary {
         width: 21.4rem;
-        font-size: 1.2rem; } }
+        margin-top: 1.6rem;
+        margin-bottom: 0;
+        font-size: 1.2rem; }
+      .first-screen-home .image {
+        display: none; } }
   @media (min-width: 1024px) {
     .first-screen-home {
-      height: 72rem;
-      background-position: 100% 85%, center center;
-      background-size: 55%, cover; }
+      height: 72rem; }
       .first-screen-home .main-heading {
         margin-top: 19.4rem;
         margin-bottom: 2.4rem;
@@ -1790,8 +1795,8 @@ label {
       .first-screen-home .btn-primary {
         margin-top: 3.2rem;
         height: 5.6rem;
-        width: 28.6rem;
-        font-size: 1.6rem;
+        width: 22.6rem;
+        font-size: 1.2rem;
         line-height: 5.6rem; } }
 
 .first-screen-equipment {

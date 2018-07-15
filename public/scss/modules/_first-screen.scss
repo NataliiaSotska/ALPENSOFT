@@ -12,11 +12,10 @@
 
 .first-screen-home {
   @extend %first-screen;
-  height: 67rem;
   background: {
-    image: url(../img/mockups.jpg), url('../img/first-screen-bg.jpg');
-    position: center bottom, center center;
-    size: 85% auto, cover;
+    image: url('../img/first-screen-bg.jpg');
+    position: center center;
+    size: cover;
   };
 
   .main-heading {
@@ -34,15 +33,14 @@
 
   .btn-primary {
     margin-top: 0.8rem;
+    margin-bottom: 4rem;
     font-size: 1.2rem;
   }
 
   @media (min-width: $medium-screen) {
     height: 64rem;
     background: {
-      image: url(../img/mockups.png), url('../img/first-screen-bg.jpg');
-      position: 110% 85%, center center;
-      size: 60%, cover;
+      image: url(../img/bg.png);
     };
     text-shadow: 0 4px 16px rgba(0, 0, 0, 0.64);
 
@@ -66,15 +64,19 @@
     }
 
     .btn-primary {
-      width: 21.4rem; 
+      width: 21.4rem;
+      margin-top: 1.6rem;
+      margin-bottom: 0;
       font-size: 1.2rem;
+    }
+
+    .image {
+      display: none;
     }
   }
 
   @media (min-width: $large-screen) {
     height: 72rem;
-    background-position: 100% 85%, center center;
-    background-size: 55%, cover;
 
     .main-heading {
       margin-top: 19.4rem;
@@ -93,8 +95,8 @@
     .btn-primary {
       margin-top: 3.2rem;
       height: 5.6rem;
-      width: 28.6rem;
-      font-size: 1.6rem;
+      width: 22.6rem;
+      font-size: 1.2rem;
       line-height: 5.6rem;
     }
   }
