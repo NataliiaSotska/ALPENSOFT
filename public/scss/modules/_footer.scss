@@ -25,6 +25,16 @@
     }
   }
 
+  .footer-contacts {
+    @media screen and (min-width: $medium-screen) {
+      padding-left: 30%;
+    }
+
+    @media screen and (min-width: $xlarge-screen) {
+      padding-left: 50%;
+    }    
+  }
+
   .copyright {
     color: $copyright-color;
     text-align: center;

@@ -50,9 +50,13 @@
 			}
 		}
 
+		.section.write-to-us {
+			padding-top: 6rem;
+		}
+
 		.increased-padding-top {
 			padding-top: 4.8rem;
-		}		
+		}	
 
 		@media (max-width: $large-screen-down) {			
 			.container.narrow-content {
