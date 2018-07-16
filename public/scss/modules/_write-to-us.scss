@@ -21,6 +21,20 @@
 	img {
 		margin-right: 1.2rem;
 	}
+
+	.btn-banded {
+		@media (min-width: $small-screen) {
+      width: 36rem;
+    }
+
+    @media (min-width: $medium-screen) {
+      width: 25.8rem;
+
+      &.btn-telegram {
+        margin-right: 2rem;
+      }
+    }
+	}
 }
 
 @media (min-width: $medium-screen) {

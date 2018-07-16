@@ -21,12 +21,24 @@
   .btn-field {
     margin-top: 1.6rem;
   }
+
+  @media (min-width: $small-screen) {
+    .btn-bordered,
+    .btn-color-mobile {
+      width: 21.4rem;
+    }
+  }
 }
 
 @media (min-width: $medium-screen) {
   .functional {
     .row {
       padding-bottom: 5.6rem;
+    }
+
+    .btn-bordered,
+    .btn-color-mobile {
+      width: 30.8rem;
     }
   }
 }

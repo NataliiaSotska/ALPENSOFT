@@ -18,7 +18,8 @@
   };
   outline: none 0;
   font-family: $base-font-family;
-  line-height: 1;
+  font-size: 1.4rem;
+  font-weight: 600;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -27,17 +28,41 @@
   transition: all 350ms ease-in-out 0s;
   user-select: none;
 
-  &-primary {
-    height: 4rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 4rem;
+  &-primary,
+  &-color-mobile,
+  &-color-tablet  {
     background-color: $btn-primary;
     color: $white;
 
     &:hover {
       background-color: lighten($btn-primary, 10%);
     }
+  }
+
+  &-primary {
+    height: 4rem;
+    line-height: 4rem;
+  }
+
+  &-color-mobile {
+    height: 4.8rem;
+    line-height: 4.8rem;
+
+    @media (min-width: $medium-screen) {
+      background-color: transparent;
+      color: $btn-primary;
+
+      &:hover {
+        background-color: $btn-primary;
+        color: $white;
+      }
+    }
+  }
+  
+  &-color-tablet {
+    width: 13.8rem;
+    height: 3.2rem;
+    line-height: 3.2rem;
 
     @media (min-width: $large-screen) {
       background-color: transparent;
@@ -47,51 +72,41 @@
         background-color: $btn-primary;
         color: $white;
       }
-
-      &-color {
-        background-color: $btn-primary;
-        color: $white;
-
-        &:hover {
-          background-color: lighten($btn-primary, 10%);
-        }
-      }
-    }
-
-    &.gradient {
-      background: linear-gradient(180deg, $btn-gradient-1 0%, $btn-gradient-2 46.23%, $btn-gradient-1 100%);
     }
   }
 
+  &-text {
+    padding: 0;
+    background-color: transparent;
+    color: $btn-primary;
+    line-height: 2.8rem;
+
+    &:hover {
+      color: lighten($btn-primary, 10%);
+    }
+  }
+
+  &.gradient {
+    line-height: 1;
+    background: linear-gradient(180deg, $btn-gradient-1 0%, $btn-gradient-2 46.23%, $btn-gradient-1 100%);
+  }
+  
+
   &-bordered {
-    padding: 1.8rem 8.7rem 1.6rem;
+    width: 100%;
+    height: 4.8rem;
+    line-height: 4.8rem;
+    background-color: transparent;
+    color: $btn-primary;
     border: {
       width: .1rem;
       style: solid;
-      color: $btn-primary;
+      color: transparent;
     };
-    background: $btn-primary;
-    color: $white;
 
-    @media (min-width: $large-screen) {
-      border: {
-        width: .1rem;
-        style: solid;
-        color: $btn-primary;
-      };
-      background: transparent;
-      color: $btn-primary;
-
-      &:hover {
-        border-color: $btn-primary;
-        background-color: $btn-primary;
-        color: $white;
-      }
+    &:hover {
+      border-color: $btn-primary;
     }
-  }
-
-  &-transparent {
-    background-color: transparent;
   }
 
   &-banded {
@@ -115,30 +130,7 @@
       border-color: $color-viber;
       color: $color-viber;
     }
-
-    &:hover {
-      background-color: rgba(0,0,0,0.2)
-    }
-
-    @media (min-width: $medium-screen) {
-      width: 25.8rem;
-
-      &.btn-telegram {
-        margin-right: 2rem;
-      }
-    }
-  }
-
-  &-text {
-    padding: 0;
-    background-color: transparent;
-    color: $btn-primary;
-    line-height: 2.8rem;
-
-    &:hover {
-      color: lighten($btn-primary, 10%);
-    }
-  }
+  }  
 }
 
 .btn-field {

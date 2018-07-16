@@ -17,6 +17,8 @@
 
   .btn {
     width: 21rem;
+    height: 4rem;
+    line-height: 4rem;
   }
 }
 
@@ -52,12 +54,6 @@
     .icon-down {
       display: none;
     }
-  }
-}
-
-.page-activ {
-  .main-item {
-    border-bottom: .2rem solid $cta-row-bg;
   }
 }
 
@@ -133,6 +129,7 @@
     .main-item {
       display: flex;
       align-items: center;
+      height: 5.6rem;
       margin-bottom: 0;
       padding: 0;
       border-bottom: 0;

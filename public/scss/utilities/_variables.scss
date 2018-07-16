@@ -11,7 +11,7 @@ $screen-breakpoints : (
 
 $small-container    : 100%;
 $medium-container   : 77rem;
-$large-container    : 102rem;
+$large-container    : 94rem;
 $xlarge-container   : 108rem;
 
 $small-screen       : map_get($screen-breakpoints, 'small');

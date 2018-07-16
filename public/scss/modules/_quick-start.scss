@@ -12,12 +12,22 @@
       margin: 1.6rem 0 .8rem;
     }
 
+    .description {
+      text-align: left;
+    }
+
     .arrow {
       display: none;
     }
 
     .btn-field {
       margin-top: 1.6rem;
+    }
+
+    @media (min-width: $small-screen) {
+      .btn-color-mobile {
+        width: 21.4rem;
+      }
     }
   }
 }
@@ -42,6 +52,10 @@
         top: 5.8rem;
         left: 100%;
         transform: translate(-50%, -50%);
+      }
+
+      .btn-color-mobile {
+        width: 100%;
       }
     }
   }
