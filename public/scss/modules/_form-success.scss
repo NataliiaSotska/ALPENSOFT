@@ -4,8 +4,7 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	padding-top: 6rem;
-	background-color: #fafbfc;
+	padding: 6rem 2.4rem 2.4rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -13,7 +12,7 @@
 	color: rgba(20, 22, 34, 0.87);
 	text-align: center;
 
-	.btn-transparent {
+	.btn-text {
 		align-self: flex-start;
 		width: auto;
 		font-size: 2.4rem;
@@ -22,7 +21,7 @@
 		color: rgba(20,22,34,0.87);
 
 		&:hover {
-			color: $btn-primary;
+			opacity: 0.6;
 		}
 
 		img {
@@ -32,15 +31,8 @@
 	}
 
 	.image {
-		height: 31rem;
-		width: 39.5rem;
-		border: 1px solid #000;
+		max-width: 36.8rem;
 	}
-
-	// .image  img {
-	// 	width: 100%;
-	// 	max-height: 31rem;
-	// }
 
 	h2 {
 		margin: 0;
@@ -50,7 +42,7 @@
 	}
 
 	p {
-		width: 36rem;
+		max-width: 37rem;
 		font-size: 1.4rem;
 		line-height: 2rem;
 		text-align: center;
@@ -58,25 +50,24 @@
 
 	.btn-primary {
 		width: 12rem;
-		margin-bottom: 2rem;
-		background-color: $btn-primary;
-    color: $white;
+	}
 
-    &:hover {
-      background-color: lighten($btn-primary, 10%);
-    }
+	@media (max-height: $small-screen) {
+		.image {
+			width: 10rem;
+		}
 	}
 
 	@media (min-width: $medium-screen) {
 		padding-top: 7.5rem;
 
-		.btn-transparent {
+		.btn-text {
 			margin-left: 5%;
 		}
 	}
 
 	@media (min-width: $large-screen) {
-		.btn-transparent {
+		.btn-text {
 			margin-left: 7.2rem;
 			font-size: 2.8rem;
 		}

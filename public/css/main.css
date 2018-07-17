@@ -1753,7 +1753,9 @@ label {
         display: block;
         width: 21.4rem;
         margin-left: auto;
-        margin-right: auto; } }
+        margin-right: auto;
+        margin-top: 1.6rem;
+        margin-bottom: 2rem; } }
   @media (min-width: 768px) {
     .first-screen-home {
       height: 64rem;
@@ -1775,7 +1777,6 @@ label {
       .first-screen-home .btn-primary {
         display: inline-block;
         width: 21.4rem;
-        margin-top: 1.6rem;
         margin-bottom: 0; }
       .first-screen-home .image {
         display: none; } }
@@ -2387,54 +2388,49 @@ label {
   right: 0;
   top: 0;
   bottom: 0;
-  padding-top: 6rem;
-  background-color: #fafbfc;
+  padding: 6rem 2.4rem 2.4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   color: rgba(20, 22, 34, 0.87);
   text-align: center; }
-  .form-success .btn-transparent {
+  .form-success .btn-text {
     align-self: flex-start;
     width: auto;
     font-size: 2.4rem;
     font-weight: bold;
     text-transform: capitalize;
     color: rgba(20, 22, 34, 0.87); }
-    .form-success .btn-transparent:hover {
-      color: #0069ff; }
-    .form-success .btn-transparent img {
+    .form-success .btn-text:hover {
+      opacity: 0.6; }
+    .form-success .btn-text img {
       margin-right: .4rem;
       margin-bottom: .4rem; }
   .form-success .image {
-    height: 31rem;
-    width: 39.5rem;
-    border: 1px solid #000; }
+    max-width: 36.8rem; }
   .form-success h2 {
     margin: 0;
     font-size: 3.2rem;
     font-weight: 300;
     line-height: 4.4rem; }
   .form-success p {
-    width: 36rem;
+    max-width: 37rem;
     font-size: 1.4rem;
     line-height: 2rem;
     text-align: center; }
   .form-success .btn-primary {
-    width: 12rem;
-    margin-bottom: 2rem;
-    background-color: #0069ff;
-    color: #fff; }
-    .form-success .btn-primary:hover {
-      background-color: #3387ff; }
+    width: 12rem; }
+  @media (max-height: 544px) {
+    .form-success .image {
+      width: 10rem; } }
   @media (min-width: 768px) {
     .form-success {
       padding-top: 7.5rem; }
-      .form-success .btn-transparent {
+      .form-success .btn-text {
         margin-left: 5%; } }
   @media (min-width: 1024px) {
-    .form-success .btn-transparent {
+    .form-success .btn-text {
       margin-left: 7.2rem;
       font-size: 2.8rem; }
     .form-success h2 {
