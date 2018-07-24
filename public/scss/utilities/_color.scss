@@ -7,6 +7,7 @@ $section-dark-bg  : color('default', 'blue');
 $section-light-bg : color('default', 'light-gray');
 $text-gradient-1  : $gradient-violet-1;
 $text-gradient-2  : $gradient-blue-3;
+$cta-row-wrap-bg  : color('default', 'blue');
 $cta-row-bg       : color('state', 'blue');
 $modal-backdrop   : rgba($base-text, .4);
 $errors           : color('state', 'red');
@@ -21,6 +22,6 @@ $btn-gradient-2   : $gradient-blue-2;
 // -----------------------
 
 // Footer ----------------
-$footer-bg        : color('default', 'blue');
+$footer-bg        : color('default', 'dark-gray');
 $copyright-color  : color('default', 'gray');
 // -----------------------

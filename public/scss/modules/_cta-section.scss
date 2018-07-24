@@ -1,19 +1,25 @@
 .cta-section {
-  padding: 4rem 0;
+  padding: 1.6rem 0 0;
   background: {
     image: url('../img/background.png');
     repeat: no-repeat;
-    size: cover;
+    position-x: center;
   };
   color: $white;
 
   .section-heading {
+    display: none;
     margin-bottom: 3.8rem;
     color: $white;
 
     &::after {
       background: $white;
     }
+  }
+
+  .cta-row-wrapper {
+    padding: 2.4rem 0;
+    background-color: $cta-row-wrap-bg;
   }
 
   .second-heading {
@@ -23,6 +29,7 @@
 
   .count {
     display: block;
+    margin-top: 2.4rem;
     margin-bottom: 2.4rem;
     -webkit-background-clip: text;
     background-image: linear-gradient(0deg, $text-gradient-1 0%, $text-gradient-2 100%);
@@ -40,9 +47,19 @@
   }
 
   .description {
-    margin-bottom: 4rem;
+    margin-bottom: 1.6rem;
     color: $white;
     opacity: 0.8;
+  }
+}
+
+.main-equipment {
+  .section.cta-section {
+    padding: 0;
+  }
+
+  .cta-row-wrapper {
+    background-color: transparent;
   }
 }
 
@@ -68,6 +85,14 @@
 @media (min-width: $medium-screen) {
   .cta-section {
     padding: 8rem 0;
+    background: {
+      size: cover;
+      position-x: unset;
+    };
+
+    .count{
+      margin-top: 0;
+    }
 
     .second-heading {
       margin-bottom: 1.6rem;
@@ -75,6 +100,11 @@
 
     .description {
       margin-bottom: 4.8rem;
+    }
+
+    .cta-row-wrapper {
+      padding: 0;
+      background-color: transparent;
     }
 
     .cta-row-wrapper {
@@ -86,6 +116,13 @@
         display: flex;
         align-items: center;
       }
+    }
+  }
+
+  .main-equipment {
+    .section.cta-section {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
     }
   }
 
@@ -102,18 +139,20 @@
 
 @media (min-width: $large-screen) {
   .cta-section {
-    padding: 6.4rem 0;
+    padding: 8rem 0 10.4rem;
 
     .section-heading {
-      margin-bottom: 8rem;
+      display: block;
+      margin-bottom: 9rem;
     }
 
     .second-heading {
       margin-bottom: 1.6rem;
+      font-size: 2.4rem;
     }
 
     .description {
-      margin-bottom: 8rem;
+      margin-bottom: 7rem;
     }
 
     .cta-row-wrapper {
@@ -139,6 +178,13 @@
           display: block;
         }
       }
+    }
+  }
+
+  .main-equipment {
+    .section.cta-section {
+      padding-top: 10.4rem;
+      padding-bottom: 10.4rem;
     }
   }
 }
