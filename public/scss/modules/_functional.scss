@@ -22,10 +22,19 @@
     margin-top: 1.6rem;
   }
 
+  .btn-bordered,
+  .btn-primary {
+    width: 100%;
+  }
+
+  .btn-bordered {
+    padding: 1.7rem 7.1rem 1.5rem;
+  }
+
   @media (min-width: $small-screen) {
     .btn-bordered,
-    .btn-color-mobile {
-      width: 21.4rem;
+    .btn-primary {
+      width: auto;
     }
   }
 }
@@ -36,9 +45,16 @@
       padding-bottom: 5.6rem;
     }
 
-    .btn-bordered,
-    .btn-color-mobile {
-      width: 30.8rem;
+    .btn-primary {
+      padding-left: 7.2rem;
+      padding-right: 7.2rem;
+      background-color: transparent;
+      color: $btn-primary;
+
+      &:hover {
+        background-color: $btn-primary;
+        color: $white;
+      }
     }
   }
 }

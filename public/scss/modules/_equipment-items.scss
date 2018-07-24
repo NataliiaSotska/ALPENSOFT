@@ -102,11 +102,11 @@
 	}
 }
 
-.set-order {
+.price-block {
 	display: flex;
 	justify-content: space-between;
 
-	.set-price {
+	.price {
 		display: block;
 		font-size: 2.4rem;
 		font-weight: 300;
@@ -115,10 +115,8 @@
 	}
 
 	.btn-primary {
-		height: 3.2rem;
-    width: 13.8rem;
-    margin: 0;
-    line-height: 3.2rem;
+		margin: 0;
+		padding: 0.5rem 3.3rem .3rem;
 	} 
 }
 
@@ -155,6 +153,19 @@
 		.card-name {
 			margin-top: 1.6rem;
 			font-size: 1.8rem;
+		}
+
+		.price-block {
+			.btn-primary {
+				padding: 0.5rem 4.1rem .3rem;
+				background-color: transparent;
+				color: $btn-primary;
+
+				&:hover {
+					background-color: $btn-primary;
+					color: $white;
+				}
+			}
 		}
 	}
 }
@@ -208,5 +219,7 @@
 		.card-name {
 			margin-top: 2.4rem;
 		}
+
+
 	}
 }

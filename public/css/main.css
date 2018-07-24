@@ -1320,64 +1320,42 @@ label {
   cursor: pointer; }
 
 .btn {
+  position: relative;
   display: inline-block;
-  width: 100%;
+  margin: 0;
+  padding: 1.8rem 2.6rem 1.6rem;
   border: 0 none;
     border-radius: .2rem;
   outline: none 0;
+  background-color: transparent;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
+  line-height: 1;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
   cursor: pointer;
+  vertical-align: middle;
   transition: all 350ms ease-in-out 0s;
   user-select: none; }
-  .btn-primary, .btn-color-mobile, .btn-color-tablet {
+  .btn-primary {
+    padding: 1.8rem 5.2rem 1.6rem;
     background-color: #0069ff;
     color: #fff; }
-    .btn-primary:hover, .btn-color-mobile:hover, .btn-color-tablet:hover {
+    .btn-primary:hover {
       background-color: #3387ff; }
-  .btn-primary {
-    height: 4rem;
-    line-height: 4rem; }
-  .btn-color-mobile {
-    height: 4.8rem;
-    line-height: 4.8rem; }
-    @media (min-width: 768px) {
-      .btn-color-mobile {
-        background-color: transparent;
-        color: #0069ff; }
-        .btn-color-mobile:hover {
-          background-color: #0069ff;
-          color: #fff; } }
-  .btn-color-tablet {
-    width: 13.8rem;
-    height: 3.2rem;
-    line-height: 3.2rem; }
-    @media (min-width: 1024px) {
-      .btn-color-tablet {
-        background-color: transparent;
-        color: #0069ff; }
-        .btn-color-tablet:hover {
-          background-color: #0069ff;
-          color: #fff; } }
+    .btn-primary.gradient {
+      background: linear-gradient(180deg, #3490fe 0%, #0060e9 46.23%, #3490fe 100%); }
   .btn-text {
     padding: 0;
-    background-color: transparent;
     color: #0069ff;
     line-height: 2.8rem; }
     .btn-text:hover {
       color: #3387ff; }
-  .btn.gradient {
-    line-height: 1;
-    background: linear-gradient(180deg, #3490fe 0%, #0060e9 46.23%, #3490fe 100%); }
   .btn-bordered {
-    width: 100%;
-    height: 4.8rem;
-    line-height: 4.8rem;
+    padding: 1.3rem 1.1rem 1.1rem;
     background-color: transparent;
     color: #0069ff;
     border-width: .1rem;
@@ -1387,19 +1365,8 @@ label {
       border-color: #0069ff; }
   .btn-banded {
     width: 100%;
-    padding: 0;
-    margin-bottom: 1.6rem;
     border-width: .1rem;
-    border-style: solid;
-    line-height: 4rem;
-    letter-spacing: 0.2px;
-    background-color: rgba(255, 255, 255, 0.32); }
-    .btn-banded.btn-telegram {
-      border-color: #2DA4D8;
-      color: #2DA4D8; }
-    .btn-banded.btn-viber {
-      border-color: #6F3FAA;
-      color: #6F3FAA; }
+    border-style: solid; }
 
 .btn-field {
   display: flex;
@@ -1479,10 +1446,6 @@ label {
     align-items: center;
     justify-content: space-between;
     height: 100%; }
-  .main-header .btn {
-    width: 21rem;
-    height: 4rem;
-    line-height: 4rem; }
 
 .nav-wrap {
   position: fixed;
@@ -1747,15 +1710,15 @@ label {
   .first-screen-home .btn-primary {
     margin-top: 0.8rem;
     margin-bottom: 4rem;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 1.5rem 7.1rem 1.3rem; }
     @media (min-width: 544px) {
       .first-screen-home .btn-primary {
         display: block;
-        width: 21.4rem;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 1.6rem;
-        margin-bottom: 2rem; } }
+        padding: 1.5rem 2.7rem 1.3rem;
+        margin: 1.6rem auto 2rem;
+        width: auto; } }
   @media (min-width: 768px) {
     .first-screen-home {
       height: 64rem;
@@ -1776,13 +1739,12 @@ label {
         letter-spacing: -0.3px; }
       .first-screen-home .btn-primary {
         display: inline-block;
-        width: 21.4rem;
         margin-bottom: 0; }
       .first-screen-home .image {
         display: none; } }
   @media (min-width: 1024px) {
     .first-screen-home {
-      height: 72rem; }
+      height: auto; }
       .first-screen-home .main-heading {
         margin-top: 19.4rem;
         margin-bottom: 2.4rem;
@@ -1794,13 +1756,10 @@ label {
         line-height: 3.2rem;
         letter-spacing: normal; }
       .first-screen-home .btn-primary {
-        margin-top: 3.2rem;
-        height: 5.6rem;
-        width: 22.6rem;
+        margin: 3.2rem 0;
+        padding: 2.1rem 2.4rem 1.9rem;
         font-size: 1.6rem;
-        font-weight: 500;
-        line-height: 5.6rem;
-        text-transform: capitalize; } }
+        font-weight: 500; } }
 
 .first-screen-equipment {
   background-image: linear-gradient(to top left, #00cac2, #00a4d7); }
@@ -1816,13 +1775,12 @@ label {
     line-height: 20px;
     color: #fff; }
   .first-screen-equipment .btn-banded {
-    margin-top: 0;
     margin-bottom: 3.8rem;
-    border: 1px solid #fff;
+    padding: 1.4rem 4.9rem 1.2rem;
+    border-color: #fff;
     background-color: rgba(255, 255, 255, 0.24);
     box-shadow: 0 4px 8px 0 rgba(38, 135, 251, 0.32), 0 7px 17px 0 rgba(0, 0, 0, 0.2);
     font-size: 1.2rem;
-    font-weight: 600;
     color: #fff; }
   .first-screen-equipment .first-screen-image img {
     position: relative;
@@ -1833,7 +1791,7 @@ label {
       .first-screen-equipment .btn-banded {
         margin-top: 2rem;
         margin-bottom: 3rem;
-        width: 21rem; } }
+        width: auto; } }
   @media (min-width: 768px) {
     .first-screen-equipment .main-heading {
       margin-top: 13.4rem;
@@ -1846,8 +1804,7 @@ label {
       letter-spacing: -0.1px; }
     .first-screen-equipment .btn-banded {
       margin-top: 4.5rem;
-      margin-bottom: 4.5rem;
-      width: 21rem; } }
+      margin-bottom: 4.5rem; } }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .first-screen-equipment .container.narrow-content {
@@ -1906,15 +1863,15 @@ label {
   .about .description {
     color: rgba(255, 255, 255, 0.8); }
   .about .btn-primary {
-    margin-top: 3.2rem;
-    margin-bottom: 2.4rem;
+    margin: 3.2rem auto 2.4rem;
+    width: 100%;
+    padding: 1.5rem 7.1rem 1.3rem;
     font-size: 1.2rem; }
     @media (min-width: 544px) {
       .about .btn-primary {
         display: block;
-        width: 21.4rem;
-        margin-left: auto;
-        margin-right: auto; } }
+        padding: 1.5rem 2.7rem 1.3rem;
+        width: auto; } }
     @media (min-width: 1024px) {
       .about .btn-primary {
         display: none; } }
@@ -1992,9 +1949,11 @@ label {
     display: none; }
   .quick-start .info-block .btn-field {
     margin-top: 1.6rem; }
+  .quick-start .info-block .btn-primary {
+    width: 100%; }
   @media (min-width: 544px) {
-    .quick-start .info-block .btn-color-mobile {
-      width: 21.4rem; } }
+    .quick-start .info-block .btn-primary {
+      width: auto; } }
 
 @media (min-width: 768px) {
   .quick-start .info-block {
@@ -2009,8 +1968,13 @@ label {
       top: 5.8rem;
       left: 100%;
       transform: translate(-50%, -50%); }
-    .quick-start .info-block .btn-color-mobile {
-      width: 100%; } }
+    .quick-start .info-block .btn-primary {
+      width: 100%;
+      background-color: transparent;
+      color: #0069ff; }
+      .quick-start .info-block .btn-primary:hover {
+        background-color: #0069ff;
+        color: #fff; } }
 
 @media (min-width: 1024px) {
   .quick-start .col .info-block {
@@ -2033,17 +1997,27 @@ label {
     margin-bottom: .8rem; }
   .functional .btn-field {
     margin-top: 1.6rem; }
+  .functional .btn-bordered,
+  .functional .btn-primary {
+    width: 100%; }
+  .functional .btn-bordered {
+    padding: 1.7rem 7.1rem 1.5rem; }
   @media (min-width: 544px) {
     .functional .btn-bordered,
-    .functional .btn-color-mobile {
-      width: 21.4rem; } }
+    .functional .btn-primary {
+      width: auto; } }
 
 @media (min-width: 768px) {
   .functional .row {
     padding-bottom: 5.6rem; }
-  .functional .btn-bordered,
-  .functional .btn-color-mobile {
-    width: 30.8rem; } }
+  .functional .btn-primary {
+    padding-left: 7.2rem;
+    padding-right: 7.2rem;
+    background-color: transparent;
+    color: #0069ff; }
+    .functional .btn-primary:hover {
+      background-color: #0069ff;
+      color: #fff; } }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .functional .flex-center {
@@ -2222,19 +2196,28 @@ label {
     line-height: 2.4rem; }
     .write-to-us .second-heading span {
       display: block; }
-  .write-to-us img {
-    margin-right: 1.2rem; }
   .write-to-us .btn-banded {
-    height: 4.8rem;
-    line-height: 4.8rem; }
+    margin-bottom: 1.6rem;
+    padding: 1.2rem 2.6rem 1rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.2px; }
+    .write-to-us .btn-banded.btn-telegram {
+      border-color: #2DA4D8;
+      color: #2DA4D8; }
+    .write-to-us .btn-banded.btn-viber {
+      border-color: #6F3FAA;
+      color: #6F3FAA; }
+    .write-to-us .btn-banded img {
+      position: relative;
+      bottom: .1rem;
+      margin-right: 1.2rem; }
     @media (min-width: 544px) {
       .write-to-us .btn-banded {
         width: 36rem; } }
     @media (min-width: 768px) {
       .write-to-us .btn-banded {
-        width: 25.8rem; }
-        .write-to-us .btn-banded.btn-telegram {
-          margin-right: 2rem; } }
+        width: 25.8rem;
+        margin: 1rem; } }
 
 @media (min-width: 768px) {
   .write-to-us .second-heading {
@@ -2311,20 +2294,18 @@ label {
   .main-equipment .increased-padding-top {
     padding-top: 5.6rem; } }
 
-.set-order {
+.price-block {
   display: flex;
   justify-content: space-between; }
-  .set-order .set-price {
+  .price-block .price {
     display: block;
     font-size: 2.4rem;
     font-weight: 300;
     line-height: 3.2rem;
     opacity: .8; }
-  .set-order .btn-primary {
-    height: 3.2rem;
-    width: 13.8rem;
+  .price-block .btn-primary {
     margin: 0;
-    line-height: 3.2rem; }
+    padding: 0.5rem 3.3rem .3rem; }
 
 .equipment-item {
   padding-top: 1.6rem;
@@ -2350,7 +2331,14 @@ label {
       padding-bottom: 5.6rem; }
       .equipment-item .card-name {
         margin-top: 1.6rem;
-        font-size: 1.8rem; } }
+        font-size: 1.8rem; }
+      .equipment-item .price-block .btn-primary {
+        padding: 0.5rem 4.1rem .3rem;
+        background-color: transparent;
+        color: #0069ff; }
+        .equipment-item .price-block .btn-primary:hover {
+          background-color: #0069ff;
+          color: #fff; } }
 
 .set-equipment .equipment-item {
   padding-bottom: 4rem; }

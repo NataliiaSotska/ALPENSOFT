@@ -38,15 +38,15 @@
   }
 
   .btn-primary {
-    margin-top: 3.2rem;
-    margin-bottom: 2.4rem;
+    margin: 3.2rem auto 2.4rem;
+    width: 100%;
+    padding: 1.5rem 7.1rem 1.3rem;
     font-size: 1.2rem;
 
     @media (min-width: $small-screen) {
       display: block;
-      width: 21.4rem;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 1.5rem 2.7rem 1.3rem;
+      width: auto;
     }
 
     @media (min-width: $large-screen) {

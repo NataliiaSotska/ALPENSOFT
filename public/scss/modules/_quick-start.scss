@@ -24,9 +24,13 @@
       margin-top: 1.6rem;
     }
 
+    .btn-primary {
+      width: 100%;
+    }
+
     @media (min-width: $small-screen) {
-      .btn-color-mobile {
-        width: 21.4rem;
+      .btn-primary {
+        width: auto;
       }
     }
   }
@@ -54,8 +58,15 @@
         transform: translate(-50%, -50%);
       }
 
-      .btn-color-mobile {
+      .btn-primary {
         width: 100%;
+        background-color: transparent;
+        color: $btn-primary;
+
+        &:hover {
+          background-color: $btn-primary;
+          color: $white;
+        }
       }
     }
   }
