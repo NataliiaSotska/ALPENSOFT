@@ -187,6 +187,14 @@ label {
   }
 }
 
+.fscf-input-select {
+  height: 3.4rem;
+  border-bottom: .1rem solid rgba(20, 22, 34, .1);
+  border-radius: 0;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
 .fscf-div-clear {
   flex-basis: 100%;
   margin-bottom: 2rem;
@@ -242,7 +250,7 @@ label {
   position: relative;
 
   input {
-    height: 3rem;
+    height: 3.4rem;
   }
 
   .fscf-div-error + input {

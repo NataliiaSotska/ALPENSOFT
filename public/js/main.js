@@ -1,1 +1,173 @@
-!function(e){"use strict";var o={SMALL_SCREEN_WIDTH:540,MEDIUM_SCREEN_WIDTH:768,LARGE_SCREEN_WIDTH:1024,XLARGE_SCREEN_WIDTH:1200};window.debounce=function(e,o){var i=!0;return function(){i&&(e.apply(this,arguments),i=!1,setTimeout(function(){i=!0},o))}},e(document).ready(function(){function i(){window.innerWidth>o.MEDIUM_SCREEN_WIDTH?(t.css({position:"fixed",top:0,left:0,right:0,"z-index":0}),s.css({height:t.outerHeight(!0)})):(t.css({position:"relative"}),s.css({height:"auto"}))}var n=e(".fixedSection"),t=n.find(".fixedSectionContent"),s=n.find(".fixedSectionPlaceholder");n&&t&&s&&(i(),e(window).on("resize",debounce(i,200)));var a=e("html"),l=e(".hamburgerBtn"),r=e(".nav-wrap");e(window).on("load resize",function(){l.hasClass("is-active")&&a.hasClass("overflow-hidden")&&(l.removeClass("is-active"),a.removeClass("overflow-hidden"),r.slideUp("fast"))}),l.on("click",function(o){o.preventDefault(),e(this).toggleClass("is-active"),a.toggleClass("overflow-hidden"),r.slideToggle("fast")}),e('a[href^="#"]').on("click",function(i){var n=e(this),t=e(n.attr("href")).offset().top-56;i.preventDefault(),e("html, body").stop().animate({scrollTop:t},1e3),window.innerWidth<o.LARGE_SCREEN_WIDTH&&(l.removeClass("is-active"),a.removeClass("overflow-hidden"),r.slideUp("fast"))});var c=e("#phoneNumber"),d=e("select");c&&c.inputmask({mask:"+3 (80) 9999-99999"}),d.selectric({disableOnMobile:!1,nativeOnMobile:!1});var f=e("#ctaForm"),h=e(".modal-backdrop"),u=e(".openConversionForm");e(document).ready(function(){u.on("click",function(){f.toggleClass("hide"),a.toggleClass("overflow-hidden")}),h.on("click",function(){f.toggleClass("hide"),a.toggleClass("overflow-hidden")})})})}(jQuery);
+(function ($) {
+  'use strict';
+
+  var App = {
+    SMALL_SCREEN_WIDTH: 540,
+    MEDIUM_SCREEN_WIDTH: 768,
+    LARGE_SCREEN_WIDTH: 1024,
+    XLARGE_SCREEN_WIDTH: 1200
+  };
+
+  window.debounce = function (func, ms) {
+
+    var shouldExec = true;
+
+    return function () {
+      if (!shouldExec) {
+        return;
+      }
+
+      func.apply(this, arguments);
+
+      shouldExec = false;
+
+      setTimeout(function () {
+        shouldExec = true;
+      }, ms);
+    };
+  };
+
+  $(document).ready(function () {
+
+    // ----- Fixed section -----
+
+    var $fixedSection = $('.fixedSection');
+    var $fixedSectionContent = $fixedSection.find('.fixedSectionContent');
+    var $fixedSectionPlaceholder = $fixedSection.find('.fixedSectionPlaceholder');
+
+    function makeFixedSection() {
+
+      if (window.innerWidth > App.MEDIUM_SCREEN_WIDTH) {
+        $fixedSectionContent.css({
+          'position': 'fixed',
+          'top': 0,
+          'left': 0,
+          'right': 0,
+          'z-index': 0
+        });
+
+        $fixedSectionPlaceholder.css({
+          'height': $fixedSectionContent.outerHeight(true)
+        });
+      } else {
+        $fixedSectionContent.css({
+          'position': 'relative'
+        });
+
+        $fixedSectionPlaceholder.css({
+          'height': 'auto'
+        });
+      }
+    }
+
+    if ($fixedSection && $fixedSectionContent && $fixedSectionPlaceholder) {
+
+      makeFixedSection();
+
+      $(window).on('resize', debounce(makeFixedSection, 200));
+    }
+
+    // ----- Header navigation -----
+
+    var $html = $('html');
+    var $headerMenuMobileButton = $('.hamburgerBtn');
+    var $headerMenu = $('.nav-wrap');
+
+    $(window).on('load resize', function () {
+
+      if ($headerMenuMobileButton.hasClass('is-active') && $html.hasClass('overflow-hidden')) {
+        $headerMenuMobileButton.removeClass('is-active');
+        $html.removeClass('overflow-hidden');
+        $headerMenu.slideUp('fast');
+      }
+    });
+
+    $headerMenuMobileButton.on('click', function (e) {
+      e.preventDefault();
+      $(this).toggleClass('is-active');
+      $html.toggleClass('overflow-hidden');
+      $headerMenu.slideToggle('fast');
+    });
+
+    // ----- Anchor scroll animation -----
+
+    $('a[href^="#"]').on('click', function (e) {
+      var anchor = $(this);
+      var offsetTop = $(anchor.attr('href')).offset().top - 56;
+
+      e.preventDefault();
+
+      $('html, body').stop().animate({
+        scrollTop: offsetTop
+      }, 1000);
+
+      if (window.innerWidth < App.LARGE_SCREEN_WIDTH) {
+        $headerMenuMobileButton.removeClass('is-active');
+        $html.removeClass('overflow-hidden');
+        $headerMenu.slideUp('fast');
+      }
+    });
+
+    // ----- Libs initialization -----
+
+    // var $phoneNumber = $('#phoneNumber');
+    // var select = $('select');
+    //
+    // if ($phoneNumber) {
+    //     $phoneNumber.inputmask({ "mask": "+3 (80) 9999-99999" });
+    // }
+    //
+    // select.selectric({
+    //     disableOnMobile: false,
+    //     nativeOnMobile: false
+    // });
+
+    // var $selectricWrapper = $('.selectric-wrapper');
+    // var $selectricLabel = $('.label');
+    //
+    // select.on('selectric-open selectric-select', function() {
+    //     $selectricWrapper.next().addClass('active');
+    // });
+    //
+    // select.on('selectric-close', function() {
+    //     if ($selectricLabel.text() !== '') {
+    //         $selectricWrapper.next().addClass('active');
+    //     } else {
+    //         $selectricWrapper.next().removeClass('active');
+    //     }
+    // });
+
+    // ----- Check inputs -----
+
+    // $('input').change(function () {
+    //     var $input = $(this);
+    //
+    //     if ($input.val() !== '') {
+    //         $input.next().addClass('active');
+    //     } else {
+    //         $input.next().removeClass('active');
+    //     }
+    // });
+
+    // ----- Modal -----
+
+    var $modal = $('#ctaForm');
+    // var $modalBackdrop = $('.modal-backdrop');
+    var $btnCloseModal = $('.btnCloseModal');
+    var $openCtaButton = $('.openConversionForm');
+
+    $(document).ready(function () {
+
+      $openCtaButton.on('click', function () {
+        $modal.toggleClass('hide');
+        $html.toggleClass('overflow-hidden');
+      });
+
+      $btnCloseModal.on('click', function () {
+        $modal.toggleClass('hide');
+        $html.toggleClass('overflow-hidden');
+      });
+    });
+  });
+
+})(jQuery);
