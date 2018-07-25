@@ -1528,6 +1528,157 @@ label {
   .card {
     padding: 2.4rem 1.6rem; } }
 
+.modal-holder-new .modal-backdrop {
+  background-color: #fafbfc;
+  z-index: 40; }
+
+.modal-holder-new .modal {
+  animation: none;
+  transform: none;
+  top: 5.6rem;
+  z-index: 45; }
+
+.modal-holder-new .card {
+  padding: 2.4rem 0 0;
+  background-color: transparent;
+  text-align: left;
+  box-shadow: none; }
+
+.modal-holder-new .btn-text {
+  color: rgba(20, 22, 34, 0.87);
+  font-size: 2rem;
+  text-transform: capitalize; }
+  .modal-holder-new .btn-text:hover {
+    opacity: 0.6; }
+  .modal-holder-new .btn-text img {
+    margin-right: .4rem;
+    margin-bottom: .4rem; }
+
+.modal-holder-new .fscf-input-text {
+  background-color: transparent;
+  font-size: 1.6rem; }
+
+.modal-holder-new .selectric .label {
+  font-size: 1.6rem; }
+
+.modal-holder-new .btn-primary {
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-image: none; }
+
+.modal-holder-new .status {
+  position: relative;
+  margin: 1.2rem auto;
+  padding: .8rem 2.4rem .8rem 5.6rem;
+  border-radius: .8rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16); }
+  .modal-holder-new .status p {
+    white-space: nowrap; }
+  .modal-holder-new .status:after,
+  .modal-holder-new .status p:after,
+  .modal-holder-new .status p:before {
+    content: '';
+    display: block;
+    position: absolute; }
+  .modal-holder-new .status:after {
+    height: 1.8rem;
+    width: 1.8rem;
+    top: 1.1rem;
+    left: 2.7rem;
+    border-width: .1rem;
+    border-style: solid;
+    border-radius: .9rem; }
+  .modal-holder-new .status span {
+    display: none; }
+
+.modal-holder-new .status-repeat:after {
+  border-color: #EB0080; }
+
+.modal-holder-new .status-repeat p:after,
+.modal-holder-new .status-repeat p:before {
+  width: 1.3rem;
+  height: .1rem;
+  top: 50%;
+  left: 3rem;
+  background-color: #EB0080; }
+
+.modal-holder-new .status-repeat p:after {
+  transform: rotate(45deg); }
+
+.modal-holder-new .status-repeat p:before {
+  transform: rotate(-45deg); }
+
+@media (min-width: 544px) {
+  .modal-holder-new .btn-primary {
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media (min-width: 544px) and (max-height: 544px) {
+  .modal-holder-new .modal {
+    animation: modalFadeInDown-mobile .45s both;
+    transform: translateY(-50%);
+    top: 50%; }
+    .modal-holder-new .modal .card {
+      padding-top: 5.6rem; }
+    .modal-holder-new .modal .fscf-input-text {
+      height: 1.8rem;
+      padding: .1rem 0; }
+    .modal-holder-new .modal .btn-text {
+      font-size: 1.8rem;
+      line-height: 2.4rem; }
+  .modal-holder-new .fscf-div-clear {
+    margin-bottom: .8rem; }
+  .modal-holder-new .selectric {
+    height: 2rem; }
+  .modal-holder-new .selectric .label {
+    height: 1.9rem;
+    padding-top: 0; }
+  .modal-holder-new .selectric .button {
+    top: -1.2rem; }
+  .modal-holder-new .fscf-div-clear {
+    margin-bottom: .8rem !important; } }
+
+@media (min-width: 768px) {
+  .modal-holder-new .modal {
+    left: 5.2rem;
+    right: 5.2rem;
+    width: auto; }
+  .modal-holder-new .card {
+    width: 46rem;
+    padding-top: 4rem; }
+  .modal-holder-new .fscf-div-form form {
+    display: block; }
+  .modal-holder-new .fscf-div-clear {
+    padding-left: 4rem !important;
+    padding-right: 0 !important; }
+  .modal-holder-new .btn-text {
+    font-size: 2.8rem; }
+    .modal-holder-new .btn-text img {
+      margin-right: 1.4rem; }
+  .modal-holder-new .btn-primary {
+    margin-left: 4rem;
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+    font-size: 1.4rem; }
+  .modal-holder-new .status {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.6rem;
+    line-height: 2.4rem; }
+    .modal-holder-new .status span {
+      display: inline; } }
+
+@media (min-width: 1024px) {
+  .modal-holder-new .modal {
+    left: 7.2rem; } }
+
 .main-header {
   position: fixed;
   top: 0;
@@ -1711,7 +1862,7 @@ label {
 .main-footer {
   position: relative;
   padding: 2.4rem 0;
-  background: #1B1E2F;
+  background: #1b1e2f;
   color: #fff;
   z-index: 1; }
   .main-footer .footer-heading {
@@ -2336,11 +2487,11 @@ label {
     background-color: rgba(255, 255, 255, 0.4);
     letter-spacing: 0.2px; }
     .write-to-us .btn-banded.btn-telegram {
-      border-color: #2DA4D8;
-      color: #2DA4D8; }
+      border-color: #2da4d8;
+      color: #2da4d8; }
     .write-to-us .btn-banded.btn-viber {
-      border-color: #6F3FAA;
-      color: #6F3FAA; }
+      border-color: #6f3faa;
+      color: #6f3faa; }
     .write-to-us .btn-banded img {
       position: relative;
       bottom: .1rem;
