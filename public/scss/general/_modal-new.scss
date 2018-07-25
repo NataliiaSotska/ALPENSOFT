@@ -1,0 +1,221 @@
+.modal-holder-new {
+
+	.modal-backdrop {
+		background-color: #fafbfc;
+		z-index: 40;
+	}
+
+	.modal {
+		animation: none;
+		transform: none;
+		top: $header-height;
+		z-index: 45;
+	}
+
+	.card {
+		padding: 2.4rem 0 0;
+		background-color: transparent;
+		text-align: left;
+		box-shadow: none;
+	}
+
+	.btn-text {
+		color: $hamburger-bg;
+		font-size: 2rem;
+		text-transform: capitalize;
+
+		&:hover {
+			opacity: 0.6;
+		}
+
+		img {
+			margin-right: .4rem;
+			margin-bottom: .4rem;
+		}
+	}
+
+	.fscf-input-text {
+		background-color: transparent;
+		font-size: 1.6rem;
+	}
+
+	.selectric .label {
+		font-size: 1.6rem;
+	}
+
+	.btn-primary {
+		width: 100%;
+		padding-top: 1.5rem;
+		padding-bottom: 1.3rem;
+		font-size: 1.2rem;
+		font-weight: 600;
+		background-image: none;
+	}
+
+	.status {
+		position: relative;
+		margin: 1.2rem auto;
+		padding: .8rem 2.4rem .8rem 5.6rem;
+		border-radius: .8rem;
+		background-color: #fff;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+
+		p {
+			white-space: nowrap;
+		}
+
+		&:after,
+		p:after,
+		p:before {
+			content: '';
+			display: block;
+			position: absolute;
+		}
+
+		&:after {
+			height: 1.8rem;
+			width: 1.8rem;
+			top: 1.1rem;
+			left: 2.7rem;
+			border: {
+				width: .1rem;
+				style: solid;
+				radius: .9rem
+			}
+		}
+
+		span {
+			display: none;
+		}
+	}
+
+	.status-repeat {
+		&:after {
+			border-color: #EB0080;
+		}
+
+		p:after,
+		p:before {
+			width: 1.3rem;
+			height: .1rem;
+			top: 50%;
+    	left: 3rem;
+			background-color: #EB0080;
+		}
+
+		p:after {
+			transform: rotate(45deg);
+		}
+
+		p:before {
+			transform: rotate(-45deg);
+		}
+	}
+
+	@media (min-width: $small-screen) {
+		.btn-primary {
+			width: auto;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@media (max-height: $small-screen) {
+			.modal {
+				animation: modalFadeInDown-mobile .45s both;
+				transform: translateY(-50%);
+				top: 50%;
+
+				.card {
+					padding-top: $header-height;
+				}
+
+				.fscf-input-text {
+					height: 1.8rem;
+					padding: .1rem 0;
+				}
+			
+				.btn-text {
+					font-size: 1.8rem;
+					line-height: 2.4rem;
+				}
+			}
+
+			.fscf-div-clear {
+				margin-bottom: .8rem;
+			}
+
+			.selectric {
+				height: 2rem;
+			}
+
+			.selectric .label {
+				height: 1.9rem;
+				padding-top: 0;
+			}
+
+			.selectric .button {
+				top: -1.2rem;
+			}
+
+			.fscf-div-clear {
+				margin-bottom: .8rem !important;
+			}
+		}
+	}
+
+	@media (min-width: $medium-screen) {
+		.modal {
+			left: 5.2rem;
+			right: 5.2rem;
+			width: auto;
+		}
+
+		.card {
+			width: 46rem;
+			padding-top: 4rem;
+		}
+
+		.fscf-div-form form {
+			display: block;
+		}
+
+		.fscf-div-clear {
+			padding-left: 4rem !important;
+			padding-right: 0 !important;
+		}
+
+		.btn-text {
+			font-size: 2.8rem;
+
+			img {
+				margin-right: 1.4rem;
+			}
+		}
+
+		.btn-primary {
+			margin-left: 4rem;
+			padding-left: 3.9rem;
+			padding-right: 3.9rem;
+			font-size: 1.4rem;
+		}
+
+		.status {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+
+			span {
+				display: inline;
+			}
+		}
+	}
+
+	@media (min-width: $large-screen) {
+		.modal {
+			left: 7.2rem;
+		}
+	}
+}
