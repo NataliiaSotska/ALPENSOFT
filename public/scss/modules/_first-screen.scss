@@ -18,26 +18,26 @@
     size: cover;
   };
 
+  p {
+    opacity: .8;
+  }
+
   .main-heading {
     @extend %main-heading;
     margin-top: 4.8rem;
-    font-size: 1.8rem;
-    line-height: 2.4rem;
-    letter-spacing: -0.5px;
     color: $main-heading;
-  }
-
-  p {
-    opacity: 0.8;
+    font-size: 1.8rem;
+    letter-spacing: -.5px;
+    line-height: 2.4rem;
   }
 
   .btn-primary {
-    margin-top: 0.8rem;
-    margin-bottom: 3.2rem;
-    font-size: 1.2rem;
     width: 100%;
+    margin-top: .8rem;
+    margin-bottom: 3.2rem;
     padding-top: 1.5rem;
     padding-bottom: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .image {
@@ -46,7 +46,7 @@
 }
 
 .main-content.main-equipment {
-  .first-screen-equipment{
+  .first-screen-equipment {
     @extend %first-screen;
   }
 }
@@ -65,21 +65,21 @@
   }
 
   .main-description {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: -0.5px;
-    line-height: 20px;
     color: $white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -.5px;
+    line-height: 2rem;
   }
 
   .btn-banded {
     margin-bottom: 3.8rem;
     padding: 1.4rem 4.9rem 1.2rem;
     border-color: $white;
-    background-color: rgba(255,255,255,0.24);
-    box-shadow: 0 4px 8px 0 rgba(38,135,251,0.32), 0 7px 17px 0 rgba(0,0,0,0.2);
-    font-size: 1.2rem;
+    background-color: rgba($white, .24);
     color: $white;
+    box-shadow: 0 4px 8px 0 rgba(38, 135, 251, .2), 0 7px 17px 0 rgba($black, .04);
+    font-size: 1.2rem;
   }
 
   .first-screen-image img {
@@ -92,49 +92,45 @@
   .first-screen-home {
     .btn-primary {
       display: block;
-      margin-right: auto;
-      margin-left: auto;
-      padding: 1.5rem 2.7rem 1.3rem;
       width: auto;
+      margin: 0 auto;
+      padding: 1.5rem 2.7rem 1.3rem;
     }
   }
 
   .first-screen-equipment {
-    text-shadow: 0 1px 4px rgba(0, 0, 0, .24);
+    text-shadow: 0 1px 4px rgba($black, .24);
 
     .btn-banded {
+      width: auto;
       margin-top: 2rem;
       margin-bottom: 3rem;
-      width: auto;
     }
   }
 }
 
 @media (min-width: $medium-screen) {
   .first-screen-home {
-    min-height: 100vh;
-    background: {
-      image: url(../img/bg.png);
-    };
-    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.64);
+    background-image: url('../img/bg.png');
+    text-shadow: 0 4px 16px rgba($black, .64);
+
+    p {
+      width: 48%;
+      font-size: 1.6rem;
+      letter-spacing: -.3px;
+      line-height: 2.4rem;
+    }
 
     .main-heading {
       width: 48%;
       margin-top: 10.4rem;
       font-size: 2rem;
-      line-height: 2.8rem;
       letter-spacing: normal;
+      line-height: 2.8rem;
 
       span {
         display: none;
       }
-    }
-
-    p {
-      width: 48%;
-      font-size: 1.6rem;
-      line-height: 2.4rem;
-      letter-spacing: -0.3px;
     }
 
     .btn-primary {
@@ -158,8 +154,8 @@
       margin: 0;
       font-size: 2rem;
       font-weight: 400;
+      letter-spacing: -.1px;
       line-height: 3.2rem;
-      letter-spacing: -0.1px;
     }
 
     .btn-banded {
@@ -169,8 +165,8 @@
 
     @media (max-width: $large-screen-down) {
       .container.narrow-content {
-        padding-left: 3.4rem;
         padding-right: 3.4rem;
+        padding-left: 3.4rem;
       }
     }
   }
@@ -179,32 +175,38 @@
 @media (min-width: $large-screen) {
   .first-screen-home,
   .first-screen-equipment {
-    min-height: 100vh;
-    height: .1rem;
 
     .container {
-      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+      height: 100%;
     }
   }
 
+  .first-screen-equipment {
+    height: .1rem;
+    min-height: 64rem;
+  }
+
   .first-screen-home {
+    height: .1rem;
+    min-height: 100vh;
+
+    p {
+      width: 43%;
+      font-size: 1.8rem;
+      letter-spacing: normal;
+      line-height: 3.2rem;
+    }
+
     .main-heading {
       width: 43%;
       margin-top: 0;
       margin-bottom: 2.4rem;
       font-size: 2.4rem;
       line-height: 3.2rem;
-    }
-
-    p {
-      width: 43%;
-      font-size: 1.8rem;
-      line-height: 3.2rem;
-      letter-spacing: normal;
     }
 
     .btn-primary {
@@ -232,15 +234,15 @@
       padding-left: 1.2rem;
       background: {
         image: url('../img/terminal.png');
-        position: right bottom;
         repeat: no-repeat;
+        position: right bottom;
       };
     }
 
     .main-heading {
       margin: 0 0 2rem;
     }
-    
+
     .main-description {
       width: 50rem;
     }
@@ -260,12 +262,6 @@
   }
 
   .first-screen-equipment {
-    .container.narrow-content {
-      max-width: 105.6rem;
-      padding-right: 4.8rem;
-      padding-left: 4.8rem;
-    }
-
     .main-description {
       width: 55.3rem;
     }

@@ -1,225 +1,247 @@
 .main-equipment {
-	.section {
-		padding-top: 2.4rem;
+  .section {
+    padding-top: 2.4rem;
 
-		.section-heading {
-			letter-spacing: -0.5px;
-		}
-	}
+    .section-heading {
+      letter-spacing: -.5px;
+    }
+  }
 
-	.set-equipment {
-		background-color: #F3F9FF;
-		box-shadow: 0 2px 8px rgba(20,22,34,0.08), 0 0 1px rgba(20,22,34,0.4);
-	}
+  .set-equipment {
+    background-color: #f3f9ff;
+    box-shadow: 0 2px 8px rgba(20, 22, 34, .08), 0 0 1px rgba(20, 22, 34, .4);
+  }
 
-	.increased-padding-top {
-		padding-top: 3.2rem;
-	}
+  .increased-padding-top {
+    padding-top: 3.2rem;
+  }
 
-	p {
-		margin-top: .8rem;
-		margin-bottom: 1.6rem;
-		letter-spacing: -0.6px;
-		line-height: 2.4rem;
-		color: rgba(20,22,34,0.64);
-	}
-	
-	.subtitle,
-	.saving  {
-		margin: 0;
-		font-size: 1.4rem;
-		font-weight: 400;
-		letter-spacing: -0.2px;
-		line-height: 2.4rem;
-		opacity: .8;
-		color: #EB0080;
-	}
+  p {
+    margin-top: .8rem;
+    margin-bottom: 1.6rem;
+    color: rgba(20, 22, 34, .64);
+    letter-spacing: -.6px;
+    line-height: 2.4rem;
+  }
 
-	@media (min-width: $small-screen) {
-		.container.narrow-content {
-			max-width: 54rem;
-		}
-	}
+  .subtitle,
+  .saving {
+    margin: 0;
+    color: #eb0080;
+    opacity: .8;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: -.2px;
+    line-height: 2.4rem;
+  }
 
-	@media (min-width: $medium-screen) {
-		.section {
-			padding-top: 3.2rem;
+  @media (min-width: $small-screen) {
+    .container.narrow-content {
+      max-width: 54rem;
+    }
+  }
 
-			.section-heading {
-				margin-bottom: 5.8rem;
-			}
-		}
+  @media (min-width: $medium-screen) {
+    .section {
+      padding-top: 3.2rem;
 
-		.section.write-to-us {
-			padding-top: 6rem;
-		}
+      .section-heading {
+        margin-bottom: 5.8rem;
+      }
+    }
 
-		.increased-padding-top {
-			padding-top: 4.8rem;
-		}	
+    .section.write-to-us {
+      padding-top: 6rem;
+    }
 
-		@media (max-width: $large-screen-down) {			
-			.container.narrow-content {
-				max-width: 72.48rem;
-			}
+    .increased-padding-top {
+      padding-top: 4.8rem;
+    }
 
-			.set-equipment .col,
-			.m-6 {
-				padding-left: 2rem;
-				padding-right: 2rem;
-			}
-		}		
-	}
+    @media (max-width: $large-screen-down) {
+      .container.narrow-content {
+        max-width: 72.48rem;
+      }
 
-	@media (min-width: $large-screen) {
-		.container.narrow-content {
-			max-width: 94rem;
-		}
-	}
+      .set-equipment .col,
+      .m-6 {
+        padding-right: 2rem;
+        padding-left: 2rem;
+      }
+    }
+  }
 
-	@media (min-width: $xlarge-screen) {
-		.container.narrow-content {
-			max-width: 115.2rem;
-		}
+  @media (min-width: $large-screen) {
+    .container.narrow-content {
+      max-width: 94rem;
+    }
+  }
 
-		.set-equipment .col,
-		.m-6 {
-			padding-left: 4.8rem;
-			padding-right: 4.8rem;
-		}
+  @media (min-width: $xlarge-screen) {
+    .container.narrow-content {
+      max-width: 108rem;
+    }
 
-		.section {
-			padding-top: 2.4rem;
+    .equipment-item-wrapper {
 
-			.section-heading {
-				margin-bottom: 7.4rem;
-			}
-		}
+      &:nth-child(3n+1) {
+        padding-right: 3rem;
+      }
 
-		.increased-padding-top {
-			padding-top: 5.6rem;
-		}		
-	}
+      &:nth-child(3n+2) {
+        padding: 0 1.5rem;
+      }
+
+      &:nth-child(3n+3) {
+        padding-left: 3rem;
+      }
+    }
+
+    .section {
+      padding-top: 2.4rem;
+
+      .section-heading {
+        margin-bottom: 7.4rem;
+      }
+    }
+
+    .increased-padding-top {
+      padding-top: 5.6rem;
+    }
+  }
+
+  @media (min-width: $xxlarge-screen) {
+    .equipment-item-wrapper {
+
+      &:nth-child(3n+1) {
+        padding-right: 4rem;
+      }
+
+      &:nth-child(3n+2) {
+        padding: 0 2rem;
+      }
+
+      &:nth-child(3n+3) {
+        padding-left: 4rem;
+      }
+    }
+  }
 }
 
 .price-block {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-	.price {
-		display: block;
-		font-size: 2.4rem;
-		font-weight: 300;
-		line-height: 3.2rem;
-		opacity: .8;
-	}
+  .price {
+    display: block;
+    opacity: .8;
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 3.2rem;
+  }
 
-	.btn-primary {
-		margin: 0;
-		padding: 0.5rem 3.3rem .3rem;
-	} 
+  .btn-primary {
+    margin: 0;
+    padding: .5rem 3.3rem .3rem;
+  }
 }
 
-
-
 .equipment-item {
-	padding-top: 1.6rem;
-	padding-bottom: 3.2rem;
+  padding-top: 1.6rem;
+  padding-bottom: 3.2rem;
 
-	.image {
-		text-align: center;
-	}
+  .image {
+    text-align: center;
+  }
 
-	.card-name {
-		margin-top: 0.8rem;
-		margin-bottom: 0;
-		font-size: 1.6rem;
-		font-weight: 500;
-		line-height: 3.2rem;
-	}
+  .card-name {
+    margin-top: .8rem;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 3.2rem;
+  }
 
-	@media (min-width: $medium-screen) {
-		height: 100%;
-		padding-top: 0;
-		padding-bottom: 4.8rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
+  @media (min-width: $medium-screen) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 4.8rem;
+  }
 
-	@media (min-width: $large-screen) {
-		padding-bottom: 5.6rem;
+  @media (min-width: $large-screen) {
+    padding-bottom: 5.6rem;
 
-		.card-name {
-			margin-top: 1.6rem;
-			font-size: 1.8rem;
-		}
+    .card-name {
+      margin-top: 1.6rem;
+      font-size: 1.8rem;
+    }
 
-		.price-block {
-			.btn-primary {
-				padding: 0.5rem 4.1rem .3rem;
-				background-color: transparent;
-				color: $btn-primary;
+    .price-block {
+      .btn-primary {
+        padding: .5rem 4.1rem .3rem;
+        background-color: transparent;
+        color: $btn-primary;
 
-				&:hover {
-					background-color: $btn-primary;
-					color: $white;
-				}
-			}
-		}
-	}
+        &:hover {
+          background-color: $btn-primary;
+          color: $white;
+        }
+      }
+    }
+  }
 }
 
 .set-equipment {
-	.equipment-item {
-		padding-bottom: 4rem;
-	}
+  .equipment-item {
+    padding-bottom: 4rem;
+  }
 
-	.card-name {
-		margin-top: 1.6rem;
-		line-height: 2.4rem;
-	}
+  .card-name {
+    margin-top: 1.6rem;
+    line-height: 2.4rem;
+  }
 
-	.feature-description {
-		margin-top: .4rem;
-	}
+  .feature-description {
+    margin-top: .4rem;
+  }
 
-	@media (min-width: $medium-screen) {
-		.image img {
-			max-height: 32.8rem;
-		}
+  @media (min-width: $medium-screen) {
+    .image img {
+      max-height: 32.8rem;
+    }
 
-		.card-name {
-			max-width: 55rem;
-			font-size: 2.8rem;
-			letter-spacing: -0.6px;
-			line-height: 4rem;
-		}
+    .card-name {
+      max-width: 55rem;
+      font-size: 2.8rem;
+      letter-spacing: -.6px;
+      line-height: 4rem;
+    }
 
-		.feature-description {
-			margin-top: 1rem;
-			margin-bottom: 3.2rem;
-		}
-	}
+    .feature-description {
+      margin-top: 1rem;
+      margin-bottom: 3.2rem;
+    }
+  }
 
-	@media (min-width: $large-screen) {
-		.equipment-item {
-			display: flex;
-			flex-direction: row;
-		}
+  @media (min-width: $large-screen) {
+    .equipment-item {
+      display: flex;
+      flex-direction: row;
+    }
 
-		.image {
-			min-width: 60.6rem;
-		}
+    .image {
+      min-width: 60.6rem;
+    }
 
-		.set-description {
-			margin-left: 2.4rem;
-		}
+    .set-description {
+      margin-left: 2.4rem;
+    }
 
-		.card-name {
-			margin-top: 2.4rem;
-		}
-
-
-	}
+    .card-name {
+      margin-top: 2.4rem;
+    }
+  }
 }

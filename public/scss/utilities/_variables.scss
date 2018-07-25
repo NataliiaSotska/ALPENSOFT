@@ -6,7 +6,8 @@ $screen-breakpoints : (
     small  : 544px,
     medium : 768px,
     large  : 1024px,
-    xlarge : 1200px
+    xlarge : 1200px,
+    xxlarge: 1600px
 );
 
 $small-container    : 100%;
@@ -18,6 +19,7 @@ $small-screen       : map_get($screen-breakpoints, 'small');
 $medium-screen      : map_get($screen-breakpoints, 'medium');
 $large-screen       : map_get($screen-breakpoints, 'large');
 $xlarge-screen      : map_get($screen-breakpoints, 'xlarge');
+$xxlarge-screen     : map_get($screen-breakpoints, 'xxlarge');
 // ----------------------
 
 // Grid vars -1 ---------
@@ -25,6 +27,7 @@ $small-screen-down  : (map_get($screen-breakpoints, 'small') - 1);
 $medium-screen-down : (map_get($screen-breakpoints, 'medium') - 1);
 $large-screen-down  : (map_get($screen-breakpoints, 'large') - 1);
 $xlarge-screen-down : (map_get($screen-breakpoints, 'xlarge') - 1);
+$xxlarge-screen-down : (map_get($screen-breakpoints, 'xxlarge') - 1);
 // ----------------------
 
 // Grid vars +1 ---------
@@ -32,6 +35,7 @@ $small-screen-up    : (map_get($screen-breakpoints, 'small') + 1);
 $medium-screen-up   : (map_get($screen-breakpoints, 'medium') + 1);
 $large-screen-up    : (map_get($screen-breakpoints, 'large') + 1);
 $xlarge-screen-up   : (map_get($screen-breakpoints, 'xlarge') + 1);
+$xxlarge-screen-up   : (map_get($screen-breakpoints, 'xxlarge') + 1);
 // ----------------------
 
 $header-height: 5.6rem;
